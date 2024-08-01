@@ -1,3 +1,46 @@
+<style>
+    .custom-img-size {
+        width: 100%; /* Ajuste a largura conforme necessário, por exemplo, 100% do contêiner pai */
+        height: auto; /* Manter a proporção da imagem */
+        max-width: 300px; /* Ajuste a largura máxima conforme necessário */
+    }
+    
+    /* Exemplo de ajuste de tamanho adicional para diferentes dispositivos */
+    @media (max-width: 768px) {
+        .custom-img-size {
+            max-width: 200px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .custom-img-size {
+            max-width: 150px;
+        }
+    }
+
+    #projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Para garantir que o texto dentro dos elementos também esteja centralizado */
+    }
+    
+    #projects .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .max-w-xl {
+        width: 100%;
+        max-width: 600px; /* Ajuste conforme necessário */
+        margin: 0 auto; /* Centraliza o elemento horizontalmente */
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+</style>
 <!doctype html>
 <html lang="en" dir="rtl" data-bs-theme="dark">
 <head>
@@ -83,7 +126,7 @@
             <div class="container px-3 py-2">
                 <a class="navbar-brand p-1" href="./index.html">
                     <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
-                    <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong>
+                   <!--  <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
                 </a>
 
                 <button class="navbar-toggler collapsed" 
@@ -99,8 +142,8 @@
                         <h5 class="offcanvas-title m-0" id="offcanvasNavbar2Label">
                             <a class="navbar-brand px-2 py-1" href="javascript:;">
                                 <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
-                                <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong>
-                            </a>
+<!--                                 <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong>
+ -->                            </a>
                         </h5>
                         <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -117,7 +160,7 @@
                             <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a href="javascript:;" onclick="scrollToSection('#projects')"
                                     class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
-                                    Projects
+                                    Ramos de Atendimento
                                 </a>
                             </li>
 
@@ -134,12 +177,8 @@
                                     FAQs
                                 </a>
                             </li>
-
                             <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
-                                <a href="mailto:contact@example.com"
-                                    class="btn btn-primary text-white btn-lg rounded-3 px-3 text-base fw-semibold leading-6 w-100">
-                                    Get in touch!
-                                </a>
+                                <img src="./assets/img/bg/logo2.jpg" alt="Logotipo" class="logo-img">
                             </li>
                         </ul>
                     </div>
@@ -164,14 +203,14 @@
                             </span>
 
                             <h1 class="m-0 mt-4 text-body-emphasis fw-bold tracking-tight text-6xl" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
-                                 NossoErp
+                                Aumente a Produtividade Da Sua Empresa Com o NossoERP
                             </h1>
                             <p class="m-0 mt-4 text-lg leading-8 text-body-secondary" data-aos-delay="100" data-aos="fade" data-aos-duration="1000">
-                                Crafting digital excellence in web/mobile dev and design—your gateway to standout online presence.
+                                O NossoErp é um Sistema de gestão eficiente, com tudo que sua empresa precisa para gerenciar as operações do dia a dia, de forma fácil e integrado, com menos trabalho e muito mais resultado.
                             </p>
                             <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
                                 <a href="mailto:contact@example.com" class="btn btn-lg btn-primary text-white text-sm fw-semibold">
-                                    Contact me
+                                    Fale Conosco
                                 </a>
                             </div>
                         </div>
@@ -200,10 +239,10 @@
     <!-- projects -->
     <div id="projects" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary">
         <div class="container">
-            <div class="mb-5 mb-sm-6 mb-xl-7">
-                <div class="max-w-xl">
+            <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
+                <div class="max-w-xl mx-auto">
                     <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl">
-                        Projects
+                        Alguns dos Ramos que Atendemos
                     </h2>
                 </div>
             </div>
@@ -221,15 +260,16 @@
                 </div>
 
                 <div class="col" data-aos-delay="100" data-aos="fade" data-aos-duration="1000">
-                    <div class="position-relative pt-4">
+                    <div class="position-relative pt-2">
                         <div class="ratio ratio-4x3">
-                            <img src="./assets/img/bg/bg3.jpg"  class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="tempalte" loading="lazy">
+                            <img src="./assets/img/bg/bg3.jpg" class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5 custom-img-size" alt="template" loading="lazy">
                         </div>
                         <a href="javascript:;" class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
                             Building Native iOS Apps
                         </a>
                     </div>
                 </div>
+                
 
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4">
@@ -261,6 +301,8 @@
             </div>
         </div>
     </div>
+</div>
+
 
 
     <!-- services -->
