@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" dir="rtl" data-bs-theme="dark">
+<head>
+<body>
+
+
+<!-- header top -->
+<div class="navigation position-absolute w-100 rounded-bottom-3 rounded-bottom-sm-4 header-bg">
+    <nav class="navbar navbar-expand-xl px-2" aria-label="Offcanvas navbar large">
+        <div class="container px-3 py-2">
+            <a class="navbar-brand p-1" href="./index.html">
+                <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
+                <!-- <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-bottom rounded-top-5 h-auto" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header px-4 pt-4 pb-4">
+                    <h5 class="offcanvas-title m-0" id="offcanvasNavbar2Label">
+                        <a class="navbar-brand px-2 py-1" href="javascript:;">
+                            <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
+                            <!-- <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
+                        </a>
+                    </h5>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav align-items-xl-center justify-content-center flex-grow-1 column-gap-4 row-gap-4">
+                        <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
+                            <a href="javascript:;" onclick="scrollToSection('#home')"
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                            <a href="javascript:;" onclick="scrollToSection('#projects')"
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
+                                Ramos de Atendimento
+                            </a>
+                        </li>
+
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                            <a href="javascript:;" onclick="scrollToSection('#services')"
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                            <a href="javascript:;" onclick="scrollToSection('#faqs')"
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
+                                FAQs
+                            </a>
+                        </li>
+                        <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
+                            <img src="assets\img\bg\logo2.png" alt="Logotipo" class="logo-img">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>

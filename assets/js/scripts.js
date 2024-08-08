@@ -76,7 +76,6 @@ function scrollToSection(sectionId) {
 }
 
 
-
 /*  
   --------------------------------------------------
   -----      JS for header top navigation      -----

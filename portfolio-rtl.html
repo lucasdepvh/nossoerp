@@ -1,6 +1,6 @@
 <style>
     .header-bg {
-        background-color: white;
+        background-color: EB7318;
     }
 
     .custom-img-size {
@@ -120,68 +120,20 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Update the 'content' attribute to reflect the actual content description -->
-    <meta name="description" content="your_description_goes_here">
-
-    <!-- Modify the 'content' attribute to include appropriate keywords -->
-    <meta name="keywords" content="your_keywords_goes_here">
-
-    <meta name="author" content="tigmatemplate">
-    <meta name="generator" content="Bootstrap">
-
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/libraries/glide/css/glide.core.min.css">
+    <link rel="stylesheet" href="./assets/libraries/aos/aos.css">
+    <link rel="stylesheet" href="./assets/css/main.min.rtl.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Change the text within the <title> tag to match the webpage's content -->
-    <title> NossoERP </title>
 
-    <!-- 
-        Set the website's favicon and Apple touch icon using the files in the assets/logo folder. You can change these files to your own icons by replacing them with the same names and sizes.
-
-        Be careful if you change the site.webmanifest file, as you need to update the src attribute of the icons array to match the new path of your icon files. Otherwise, your icons may not display correctly on some devices. 
-    -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo/favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="./assets/logo/favicon.ico">
     <link rel="manifest" href="./assets/logo/site.webmanifest">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="./assets/libraries/glide/css/glide.core.min.css">
-    <link rel="stylesheet" href="./assets/libraries/aos/aos.css">
-    <link rel="stylesheet" href="./assets/css/main.min.rtl.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <!-- Update the 'title' and 'description' content below to enhance social sharing -->
-    <meta property="og:title" content="your_title_goes_here">
-    <meta property="og:description" content="your_description_goes_here">
-    <!-- Update with actual absolute image URL like: https://example.com/main.jpg -->
-    <meta property="og:image" content="your_absolute_image_url_goes_here">
-    <!-- Update with the absolute URL of the content like: https://example.com/index.html -->
-    <meta property="og:url" content="your_absolute_content_url_goes_here">
-    <!-- Update with the type of object you’re sharing. (e.g., article, website, etc.) -->
-    <meta property="og:type" content="website">
-    <!-- Defines the content language -->
-    <meta property="og:locale" content="en_US">
-
-
-    <!-- X/Twitter Card Meta Tags for Social Sharing -->
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- Update with your X/Twitter handle -->
-    <meta name="twitter:site" content="@yourtwitterhandle">
-    <!-- Update the 'title' and 'description' content below to enhance social sharing -->
-    <meta name="twitter:title" content="your_title_goes_here">
-    <meta name="twitter:description" content="your_description_goes_here">
-    <!-- Update with actual absolute image URL like: https://example.com/main.jpg -->
-    <meta name="twitter:image" content="your_absolute_image_url_goes_here">
-
-    <!-- 
-        The following line specifies the canonical URL for this page.
-        Replace your_canonical_url_goes_here with the actual canonical URL if needed like: https://example.com/index.html
-        Or just remove it!!!!
-    -->
-    <link rel="canonical" href="your_canonical_url_goes_here">
+    <title> NossoERP </title>
 
 </head>
 
@@ -194,83 +146,8 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-
-
-    <!-- header top -->
-    <div class="navigation position-absolute w-100 rounded-bottom-3 rounded-bottom-sm-4 header-bg">
-        <nav class="navbar navbar-expand-xl px-2" aria-label="Offcanvas navbar large">
-            <div class="container px-3 py-2">
-                <a class="navbar-brand p-1" href="./index.html">
-                    <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
-                    <!-- <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
-                </a>
-
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="toggler-icon top-bar"></span>
-                    <span class="toggler-icon middle-bar"></span>
-                    <span class="toggler-icon bottom-bar"></span>
-                </button>
-
-                <div class="offcanvas offcanvas-bottom rounded-top-5 h-auto" tabindex="-1" id="offcanvasNavbar2"
-                    aria-labelledby="offcanvasNavbar2Label">
-                    <div class="offcanvas-header px-4 pt-4 pb-4">
-                        <h5 class="offcanvas-title m-0" id="offcanvasNavbar2Label">
-                            <a class="navbar-brand px-2 py-1" href="javascript:;">
-                                <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
-                                <!-- <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
-                            </a>
-                        </h5>
-                        <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-
-                    <div class="offcanvas-body">
-                        <ul
-                            class="navbar-nav align-items-xl-center justify-content-center flex-grow-1 column-gap-4 row-gap-4">
-                            <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
-                                <a href="javascript:;" onclick="scrollToSection('#home')"
-                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover"
-                                    style="color: #000 !important;">
-                                    Home
-                                </a>
-                            </li>
-
-                            <li class="nav-item" data-bs-dismiss="offcanvas">
-                                <a href="javascript:;" onclick="scrollToSection('#projects')"
-                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover"
-                                    style="color: #000 !important;">
-                                    Ramos de Atendimento
-                                </a>
-                            </li>
-
-                            <li class="nav-item" data-bs-dismiss="offcanvas">
-                                <a href="javascript:;" onclick="scrollToSection('#services')"
-                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover"
-                                    style="color: #000 !important;">
-                                    Services
-                                </a>
-                            </li>
-
-                            <li class="nav-item" data-bs-dismiss="offcanvas">
-                                <a href="javascript:;" onclick="scrollToSection('#faqs')"
-                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover"
-                                    style="color: #000 !important;">
-                                    FAQs
-                                </a>
-                            </li>
-                            <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
-                                <img src="assets\img\bg\logo2.png" alt="Logotipo" class="logo-img">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-
+    <!-- Local onde o header será inserido -->
+    <div id="header"></div>
 
     <!-- Hero -->
     <div id="home" class="d-flex align-items-center position-relative">
@@ -287,7 +164,8 @@
                             <p class="m-0 mt-4 text-lg leading-8 text-body-secondary" data-aos-delay="100"
                                 data-aos="fade" data-aos-duration="1000">
                                 O NossoErp é um Sistema de gestão eficiente, com tudo que sua empresa precisa para
-                                gerenciar as operações do dia a dia, de forma fácil e integrado, com menos trabalho e
+                                gerenciar as operações do dia a dia, de forma fácil e integrado, com menos trabalho
+                                e
                                 muito mais resultado.
                             </p>
                             <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
@@ -312,14 +190,6 @@
             </div>
         </div>
     </div>
-
-    <!-- 
-    <div class="container pb-6">
-        <h2 class="text-center text-lg fw-semibold leading-8 text-body-emphasis m-0 mb-5">
-            Trusted by the world’s most innovative teams at
-        </h2> -->
-
-
 
     <!-- projects -->
     <div id="projects" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary">
@@ -368,7 +238,7 @@
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
                                 loading="lazy">
                         </div>
-                        <a href="javascript:;"
+                        <a href="assets\servicos\autocenter.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
                             Materiais de Construção
                         </a>
@@ -450,8 +320,10 @@
 
                                     <p class="m-0 mt-3 text-body-secondary text-sm leading-6">
                                         Nosso serviço de Web Development oferece o desenvolvimento de interfaces de
-                                        usuário interativas e aplicações dinâmicas no servidor. Criamos plataformas de
-                                        e-commerce e de negócios robustas, que são seguras, escaláveis e otimizadas para
+                                        usuário interativas e aplicações dinâmicas no servidor. Criamos plataformas
+                                        de
+                                        e-commerce e de negócios robustas, que são seguras, escaláveis e otimizadas
+                                        para
                                         o melhor desempenho.
                                     </p>
                                 </div>
@@ -471,9 +343,11 @@
                                     </h3>
 
                                     <p class="m-0 mt-3 text-body-secondary text-sm leading-6">
-                                        Desenvolvemos aplicativos móveis nativos e híbridos com foco no usuário. Nossa
+                                        Desenvolvemos aplicativos móveis nativos e híbridos com foco no usuário.
+                                        Nossa
                                         abordagem centrada no design garante interfaces intuitivas e experiências de
-                                        usuário excepcionais. Otimizamos o desempenho dos aplicativos para assegurar um
+                                        usuário excepcionais. Otimizamos o desempenho dos aplicativos para assegurar
+                                        um
                                         funcionamento suave e eficiente.
                                     </p>
                                 </div>
@@ -493,9 +367,12 @@
                                     </h3>
 
                                     <p class="m-0 mt-3 text-body-secondary text-sm leading-6">
-                                        Nosso serviço de Web Design oferece designs estéticos e funcionais que capturam
-                                        a identidade da sua marca. Criamos layouts responsivos que garantem uma ótima
-                                        experiência em todos os dispositivos. Do branding à prototipagem, nossa equipe
+                                        Nosso serviço de Web Design oferece designs estéticos e funcionais que
+                                        capturam
+                                        a identidade da sua marca. Criamos layouts responsivos que garantem uma
+                                        ótima
+                                        experiência em todos os dispositivos. Do branding à prototipagem, nossa
+                                        equipe
                                         transforma suas ideias em designs cativantes e eficientes.
                                     </p>
                                 </div>
@@ -511,63 +388,6 @@
             </li>
 
 
-            <!--
-            <div class="container">
-                <div class="header">
-                    <h1>Nosso ERP - Connect</h1>
-                </div>
-                <div class="feature">
-                    <img src="assets/img/bg/vendaegestao.png" alt="Vendas Externas">
-                    <p>Vendas Externas</p>
-                </div>
-                <div class="content">
-                    <div class="right">
-                        <h2>Eleve o desempenho da sua equipe de vendas e maximize os resultados da sua empresa com o
-                            <span style="color: #FF5733;">NossoERP Connect</span>.
-                        </h2>
-                        <p>O NossoERP Connect é um aplicativo de força de vendas integrado ao NossoERP Retaguarda,
-                            oferecendo flexibilidade e mais eficiência nas operações de vendas externas e internas, além
-                            de contar com outras ferramentas auxiliares que proporcionam uma gestão empresarial mais
-                            inteligente e simplificada.</p>
-                        <a href="#" class="button">Fale Conosco</a>
-                    </div>
-                </div>
-                <div class="features">
-                    <div class="feature">
-                        <img src="icone-vendas-externas.png" alt="Vendas Externas">
-                        <p>Vendas Externas</p>
-                    </div>
-                    <div class="feature">
-                        <img src="icone-vendas-internas.png" alt="Vendas Internas">
-                        <p>Vendas Internas</p>
-                    </div>
-                    <div class="feature">
-                        <img src="icone-controle-visitas.png" alt="Controle de Visitas">
-                        <p>Controle de Visitas</p>
-                    </div>
-                    <div class="feature">
-                        <img src="icone-cobrancas.png" alt="Cobranças">
-                        <p>Cobranças</p>
-                    </div>
-                    <div class="feature">
-                        <img src="icone-bi.png" alt="Business Intelligence - BI">
-                        <p>Business Intelligence - BI</p>
-                    </div>
-                    <div class="feature">
-                        <img src="icone-bloqueios.png" alt="Liberação de Bloqueios">
-                        <p>Liberação de Bloqueios</p>
-                    </div>
-                    <div class="feature">
-                        <img src="icone-estoque.png" alt="Balanço de Estoque">
-                        <p>Balanço de Estoque</p>
-                    </div>
-                    <div class="feature">
-                        <img src="icone-etiquetas.png" alt="Etiquetas">
-                        <p>Etiquetas</p>
-                    </div>
-                </div>
-            </div>
--->
             <!-- Call to action -->
             <div class="pb-9 pt-7">
                 <div class="container">
@@ -600,11 +420,9 @@
                 </div>
             </div>
 
-
             <div class="container">
                 <hr class="my-2 text-body-emphasis opacity-10">
             </div>
-
 
             <footer class="container py-4">
                 <div class="d-flex flex-column flex-md-row gap-4 justify-content-md-between align-items-md-center">
@@ -665,7 +483,6 @@
                 </div>
             </footer>
 
-
             <!-- Back to top button -->
             <button type="button"
                 class="btn btn-primary btn-back-to-top rounded-circle justify-content-center align-items-center p-2 text-white">
@@ -676,15 +493,23 @@
                 </svg>
             </button>
 
-
-
             <!-- Bootstrap JavaScript: Bundle with Popper -->
             <script src="./assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
             <script src="./assets/libraries/glide/glide.min.js"></script>
             <script src="./assets/libraries/aos/aos.js"></script>
             <script src="./assets/js/scripts.js"></script>
-
-
+            <script>
+                function loadHeader() {
+                    fetch('header.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('header').innerHTML = data;
+                        })
+                        .catch(error => console.error('Erro ao carregar o header:', error));
+                }
+            
+                document.addEventListener('DOMContentLoaded', loadHeader);
+            </script>
 </body>
 
 </html>
