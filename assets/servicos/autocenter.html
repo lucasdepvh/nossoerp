@@ -1,73 +1,173 @@
-<!doctype html>
-<html lang="en" dir="rtl" data-bs-theme="dark">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros Elétricos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #262626; /* Cor de fundo ajustada */
+            color: #f4f4f4; /* Cor de texto ajustada para contraste */
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: #f57c00; /* Cor laranja */
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ccc 1px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .main-content {
+            flex: 1;
+            width: 100%;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .col {
+            flex: 1;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .col img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .col h2 {
+            color: #ccc; /* Cor do título */
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+        .image-text {
+            display: flex;
+            align-items: center;
+        }
+        .image-text img {
+            margin-right: 20px;
+        }
+        .btn-voltar, .btn-faleconosco {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            background-color: #f57c00; /* Cor laranja */
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            position: fixed;
+        }
+        .btn-voltar {
+            right: 20px;
+            bottom: 20px;
+        }
+        .btn-faleconosco {
+            right: 20px;
+            bottom: 80px; /* Ajuste conforme necessário */
+            animation: alerta 2s infinite; /* Adiciona animação pulsante */
+        }
+        .btn-voltar i, .btn-faleconosco i {
+            margin-right: 8px;
+        }
+        .btn-voltar:hover {
+            background-color: #e64a19; /* Cor laranja mais escura ao passar o mouse */
+            transform: scale(1.05);
+        }
+        .btn-voltar:active {
+            background-color: #d84315; /* Cor laranja ainda mais escura quando clicado */
+        }
+        @keyframes alerta {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 #f59e44;
+            }
+            70% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 20px #f59e44;
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 #f59e44;
+            }
+        }
+    </style>
+</head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Material de Construção</h1>
+        </div>
+    </header>
 
-
-<!-- header top -->
-<div class="navigation position-absolute w-100 rounded-bottom-3 rounded-bottom-sm-4 header-bg">
-    <nav class="navbar navbar-expand-xl px-2" aria-label="Offcanvas navbar large">
-        <div class="container px-3 py-2">
-            <a class="navbar-brand p-1" href="./index.html">
-                <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
-                <!-- <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
-            </a>
-
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="toggler-icon top-bar"></span>
-                <span class="toggler-icon middle-bar"></span>
-                <span class="toggler-icon bottom-bar"></span>
-            </button>
-
-            <div class="offcanvas offcanvas-bottom rounded-top-5 h-auto" tabindex="-1" id="offcanvasNavbar2"
-                aria-labelledby="offcanvasNavbar2Label">
-                <div class="offcanvas-header px-4 pt-4 pb-4">
-                    <h5 class="offcanvas-title m-0" id="offcanvasNavbar2Label">
-                        <a class="navbar-brand px-2 py-1" href="javascript:;">
-                            <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
-                            <!-- <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
-                        </a>
-                    </h5>
-                    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav align-items-xl-center justify-content-center flex-grow-1 column-gap-4 row-gap-4">
-                        <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
-                            <a href="javascript:;" onclick="scrollToSection('#home')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
-                                Home
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col image-text">
+                    <img src="assets/img/bg/materialdeconstrucao.jpg" alt="Material de Construção">
+                    <div>
+                        <h2 style="color: #ccc;">Materiais de Construção</h2>
+                        <p>Descubra mais sobre os materiais de construção e como eles se relacionam com a construção de veículos elétricos modernos e sustentáveis.</p>
+                        <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
+                            <a href="https://wa.me/556921414110" class="btn-faleconosco">
+                                Fale Conosco
                             </a>
-                        </li>
-
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <a href="javascript:;" onclick="scrollToSection('#projects')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
-                                Ramos de Atendimento
-                            </a>
-                        </li>
-
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <a href="javascript:;" onclick="scrollToSection('#services')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
-                                Services
-                            </a>
-                        </li>
-
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <a href="javascript:;" onclick="scrollToSection('#faqs')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover" style="color: #000 !important;">
-                                FAQs
-                            </a>
-                        </li>
-                        <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
-                            <img src="assets\img\bg\logo2.png" alt="Logotipo" class="logo-img">
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <p>No competitivo mercado de materiais de construção, a eficiência e a gestão eficaz são essenciais para o sucesso. As empresas do setor enfrentam uma série de desafios, desde o controle de inventário até a logística e o atendimento ao cliente. A solução para enfrentar esses desafios e se destacar é a adoção de software especializado em gestão empresarial.</p>
+                    <p><strong>Por que Investir em Software para Empresas de Materiais de Construção?</strong></p>
+                    <ul>
+                        <li><strong>Otimização de Inventário:</strong> Um software de gestão permite um controle preciso e em tempo real do estoque, minimizando erros e evitando falta de produtos. Com funcionalidades como alertas de baixo estoque e relatórios detalhados, você pode gerenciar seu inventário de forma mais eficiente e reduzir custos associados a excessos ou faltas de produtos.</li>
+                        <li><strong>Gestão de Pedidos e Vendas:</strong> A integração de um sistema de software facilita o processamento de pedidos e a gestão de vendas. Automatize a entrada de pedidos, acompanhe o status das entregas e forneça aos seus clientes informações precisas sobre o andamento de suas compras, melhorando a satisfação e a fidelização.</li>
+                        <li><strong>Análise de Dados e Relatórios:</strong> Software avançado oferece ferramentas de análise de dados que ajudam a identificar tendências de mercado, avaliar o desempenho de vendas e prever a demanda futura. Com relatórios detalhados, você pode tomar decisões baseadas em dados concretos e direcionar estratégias mais eficazes.</li>
+                        <li><strong>Melhoria na Logística:</strong> A gestão eficiente da logística é crucial para garantir que os produtos cheguem aos clientes no prazo e em boas condições. Um sistema de software pode otimizar rotas de entrega, gerenciar frotas e coordenar com transportadoras para melhorar a eficiência operacional.</li>
+                        <li><strong>Integração com Outros Sistemas:</strong> A integração com sistemas contábeis, financeiros e de CRM permite uma visão holística das operações da empresa. Isso facilita a sincronização de dados, a redução de erros e a automação de processos, tornando a gestão mais ágil e eficaz.</li>
+                        <li><strong>Suporte ao Cliente:</strong> Melhore o atendimento ao cliente com um sistema de software que inclui funcionalidades como chat ao vivo, tickets de suporte e histórico de interações. Responda rapidamente às consultas e resolva problemas com mais eficiência, aumentando a satisfação e a lealdade dos clientes.</li>
+                    </ul>
+                    <p><strong>Benefícios do Desenvolvimento Personalizado:</strong> Embora existam muitas soluções prontas no mercado, o desenvolvimento de software personalizado oferece vantagens significativas. Ao criar uma solução sob medida para sua empresa, você garante que o sistema atenda às suas necessidades específicas e se integre perfeitamente aos seus processos existentes. Além disso, o software personalizado pode evoluir junto com sua empresa, adaptando-se às mudanças do mercado e às novas demandas.</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <a href="/portfolio-rtl.html" class="btn-voltar">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </a>
+            </div>
         </div>
-    </nav>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NossoERP. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3
