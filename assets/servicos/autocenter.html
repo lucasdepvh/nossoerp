@@ -6,6 +6,7 @@
     <title>Carros Elétricos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* CSS existente */
         html, body {
             height: 100%;
             margin: 0;
@@ -20,12 +21,35 @@
         header {
             background: #f57c00; /* Cor laranja */
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #ccc 1px solid;
-            text-align: center;
+            padding: 20px; /* Adiciona espaço interno ao cabeçalho */
+            margin-bottom: 20px; /* Adiciona espaço abaixo do cabeçalho */
+            text-align: center; /* Centraliza o texto no cabeçalho */
         }
-        header h1 {
+        header h2 {
+            margin: 0; /* Remove a margem padrão do <h2> */
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas pequenas */
+        }
+        .section img {
+            width: 100%;
+            max-width: 200px; /* Máximo de largura para as imagens */
+            height: auto;
+            margin-right: 20px;
+        }
+        .section .text {
+            flex: 1;
+        }
+        .section .text h2 {
+            font-size: 20px;
+            color: #e77e23;
+            margin-bottom: 10px;
+        }
+        .section .text p {
+            /*color: #555;*/
             margin: 0;
         }
         .main-content {
@@ -56,11 +80,18 @@
             color: #ccc; /* Cor do título */
         }
         footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
+            background: #333; /* Cor de fundo */
+            color: #fff; /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+            padding: 20px; /* Adiciona espaçamento interno */
+            width: 100%; /* Garante que o footer ocupe a largura total */
+            box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+            position: relative; /* Garante que o footer não sobreponha o botão fixo */
+        }
+        footer p {
+            margin: 0; /* Remove a margem padrão do parágrafo */
+            font-size: 14px; /* Ajusta o tamanho da fonte */
+            line-height: 1.5; /* Melhora a legibilidade */
         }
         .image-text {
             display: flex;
@@ -82,6 +113,7 @@
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
             position: fixed;
+            z-index: 1000; /* Garante que os botões fiquem acima do conteúdo */
         }
         .btn-voltar {
             right: 20px;
@@ -109,65 +141,148 @@
             }
             70% {
                 transform: scale(1.1);
-                box-shadow: 0 0 0 20px #f59e44;
+                box-shadow: 0 0 0 5px #f59e44;
             }
             100% {
                 transform: scale(1);
                 box-shadow: 0 0 0 0 #f59e44;
             }
         }
+
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            .section {
+                flex-direction: column; /* Alinha as seções verticalmente em telas menores */
+                text-align: center;
+            }
+            .section img {
+                margin: 0 0 20px 0;
+            }
+            .container {
+                width: 90%;
+                padding-bottom: 80px; /* Ajusta o espaço inferior para telas menores */
+            }
+            .btn-voltar, .btn-faleconosco {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .btn-faleconosco {
+                bottom: 60px; /* Ajuste conforme necessário */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 18px;
+            }
+            .section img {
+                width: 100%;
+                max-width: none;
+            }
+            .btn-voltar, .btn-faleconosco {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            .btn-faleconosco {
+                bottom: 50px; /* Ajuste conforme necessário */
+            }
+        }
+
+        /* CSS Adicional para a Header */
+        .header ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between; /* Distribui os itens igualmente ao longo da linha */
+        }
+        .header ul li {
+            flex: 1; /* Faz com que os itens ocupem o espaço disponível */
+            text-align: center; /* Centraliza o texto dentro de cada item */
+        }
+        .header ul li.left {
+            text-align: left; /* Alinha o primeiro item à esquerda */
+        }
+        .header ul li.center {
+            text-align: center; /* Alinha o item do meio ao centro */
+        }
+        .header ul li.right {
+            text-align: right; /* Alinha o último item à direita */
+        }
     </style>
+
 </head>
 <body>
+    
     <header>
-        <div class="container">
-            <h1>Material de Construção</h1>
-        </div>
+     <h2> Material para Construção</h2>
     </header>
 
-    <div class="main-content">
-        <div class="container">
-            <div class="row">
-                <div class="col image-text">
-                    <img src="assets/img/bg/materialdeconstrucao.jpg" alt="Material de Construção">
-                    <div>
-                        <h2 style="color: #ccc;">Materiais de Construção</h2>
-                        <p>Descubra mais sobre os materiais de construção e como eles se relacionam com a construção de veículos elétricos modernos e sustentáveis.</p>
-                        <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
-                            <a href="https://wa.me/556921414110" class="btn-faleconosco">
-                                Fale Conosco
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>No competitivo mercado de materiais de construção, a eficiência e a gestão eficaz são essenciais para o sucesso. As empresas do setor enfrentam uma série de desafios, desde o controle de inventário até a logística e o atendimento ao cliente. A solução para enfrentar esses desafios e se destacar é a adoção de software especializado em gestão empresarial.</p>
-                    <p><strong>Por que Investir em Software para Empresas de Materiais de Construção?</strong></p>
-                    <ul>
-                        <li><strong>Otimização de Inventário:</strong> Um software de gestão permite um controle preciso e em tempo real do estoque, minimizando erros e evitando falta de produtos. Com funcionalidades como alertas de baixo estoque e relatórios detalhados, você pode gerenciar seu inventário de forma mais eficiente e reduzir custos associados a excessos ou faltas de produtos.</li>
-                        <li><strong>Gestão de Pedidos e Vendas:</strong> A integração de um sistema de software facilita o processamento de pedidos e a gestão de vendas. Automatize a entrada de pedidos, acompanhe o status das entregas e forneça aos seus clientes informações precisas sobre o andamento de suas compras, melhorando a satisfação e a fidelização.</li>
-                        <li><strong>Análise de Dados e Relatórios:</strong> Software avançado oferece ferramentas de análise de dados que ajudam a identificar tendências de mercado, avaliar o desempenho de vendas e prever a demanda futura. Com relatórios detalhados, você pode tomar decisões baseadas em dados concretos e direcionar estratégias mais eficazes.</li>
-                        <li><strong>Melhoria na Logística:</strong> A gestão eficiente da logística é crucial para garantir que os produtos cheguem aos clientes no prazo e em boas condições. Um sistema de software pode otimizar rotas de entrega, gerenciar frotas e coordenar com transportadoras para melhorar a eficiência operacional.</li>
-                        <li><strong>Integração com Outros Sistemas:</strong> A integração com sistemas contábeis, financeiros e de CRM permite uma visão holística das operações da empresa. Isso facilita a sincronização de dados, a redução de erros e a automação de processos, tornando a gestão mais ágil e eficaz.</li>
-                        <li><strong>Suporte ao Cliente:</strong> Melhore o atendimento ao cliente com um sistema de software que inclui funcionalidades como chat ao vivo, tickets de suporte e histórico de interações. Responda rapidamente às consultas e resolva problemas com mais eficiência, aumentando a satisfação e a lealdade dos clientes.</li>
-                    </ul>
-                    <p><strong>Benefícios do Desenvolvimento Personalizado:</strong> Embora existam muitas soluções prontas no mercado, o desenvolvimento de software personalizado oferece vantagens significativas. Ao criar uma solução sob medida para sua empresa, você garante que o sistema atenda às suas necessidades específicas e se integre perfeitamente aos seus processos existentes. Além disso, o software personalizado pode evoluir junto com sua empresa, adaptando-se às mudanças do mercado e às novas demandas.</p>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <a href="/portfolio-rtl.html" class="btn-voltar">
-                    <i class="fas fa-arrow-left"></i> Voltar
-                </a>
+    <div class="container">
+        <div class="header">
+            <div>
+                <ul>
+                    <li class="left">Ferragens e Ferramentas</li>
+                    <li class="center">Materiais Elétricos</li>
+                    <li class="right">Comércio de Tintas</li>
+                </ul>
             </div>
         </div>
+<hr>
+        <div class="section">
+            <img src="../assets/img/bg/entrada_nota.jpg" alt="Entrada de Nota Fiscal">
+            <div class="text">
+                <h2>Entrada de Nota Fiscal</h2>
+                <li>No módulo de entrada de Nota Fiscal, abra o arquivo XML do fornecedor e realize todos os trâmites antes da mercadoria chegar na empresa: cadastre produtos, gerencie preços, conversões de embalagens, previsão de entrega para o setor de vendas e gere o contas a pagar de forma automatizada.</li>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="historico_cliente.png" alt="Histórico de Cliente">
+            <div class="text">
+                <h2>Histórico de Cliente</h2>
+                <li>Acompanhe o histórico de compra do seu cliente, incluindo o total de vendas canceladas, produtos devolvidos, produtos mais comprados, contas a receber, contas em atraso, atraso médio, juros recebidos, saldo de limite de crédito e classificação do cliente na curva ABC.</li>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="gestao_comissoes.png" alt="Gestão de Comissões">
+            <div class="text">
+                <h2>Gestão de Comissões</h2>
+                <li>Tenha a flexibilidade de escolher o melhor modelo de comissão para sua equipe de vendas, seja por Produto, por vendedor, por forma de pagamento, por grupo de produto, sub-grupo de produtos, por região e por recebimento.</li>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="gestao_comissoes.png" alt="Gestão de Comissões">
+            <div class="text">
+                <h2>Plataforma Multi Lojas</h2>
+                <li>Gerencie múltiplas lojas de forma integrada, compartilhe dados de clientes, produtos e informações de vendas, gerencie estoque, preços e condições de vendas diferenciadas para cada loja.</li>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="gestao_comissoes.png" alt="Gestão de Comissões">
+            <div class="text">
+                <h2> NOSSO DIFERENCIAL</h2>
+                <strong>Facilidade de Uso:</strong><li>Gerencie múltiplas lojas de forma integrada, compartilhe dados de clientes, produtos e informações de vendas, gerencie estoque, preços e condições de vendas diferenciadas para cada loja.</p>
+            </div>
+        </div>
+</div>
+    <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
+        <a href="https://wa.me/556921414110" class="btn-faleconosco">
+            Fale Conosco
+        </a>
     </div>
-
     <footer>
-        <p>&copy; 2024 NossoERP. Todos os direitos reservados.</p>
+        <p>&copy; Para mais informações, entre em contato conosco
+            e agende uma visita para demonstração do
+            NossoERP.</p>
     </footer>
-
+</body>
+</html>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3
+
