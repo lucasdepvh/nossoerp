@@ -1,60 +1,5 @@
 <style>
-    .header-bg {
-        background-color: EB7318;
-    }
-
-    .custom-img-size {
-        width: 100%;
-        /* Ajuste a largura conforme necessário, por exemplo, 100% do contêiner pai */
-        height: auto;
-        /* Manter a proporção da imagem */
-        max-width: 300px;
-        /* Ajuste a largura máxima conforme necessário */
-    }
-
-    /* Exemplo de ajuste de tamanho adicional para diferentes dispositivos */
-    @media (max-width: 768px) {
-        .custom-img-size {
-            max-width: 200px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .custom-img-size {
-            max-width: 150px;
-        }
-    }
-
-    #projects {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        /* Para garantir que o texto dentro dos elementos também esteja centralizado */
-    }
-
-    #projects .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .max-w-xl {
-        width: 100%;
-        max-width: 600px;
-        /* Ajuste conforme necessário */
-        margin: 0 auto;
-        /* Centraliza o elemento horizontalmente */
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    .orange-text {
-        color: #EB7318;
-    }
-
+    /* Estilos existentes */
     body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
@@ -114,6 +59,108 @@
     .button:hover {
         background-color: #45a049;
     }
+
+    /* Estilos personalizados */
+    .header-bg {
+        background-color: #EB7318; /* Corrigido para código de cor hexadecimal */
+    }
+
+    .custom-img-size {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    @media (max-width: 768px) {
+        .custom-img-size {
+            max-width: 200px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .custom-img-size {
+            max-width: 150px;
+        }
+    }
+
+    #projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #projects .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .max-w-xl {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .orange-text {
+        color: #EB7318;
+    }
+
+    /* Grid de projetos */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px; /* Ajuste para compensar o padding das colunas */
+    }
+
+    .col {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    @media (min-width: 576px) {
+        .col {
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .col {
+            flex: 1 1 33.33%;
+            max-width: 33.33%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .col {
+            flex: 1 1 25%;
+            max-width: 25%;
+        }
+    }
+
+    .ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 75%; /* Proporção 4:3 */
+    }
+
+    .ratio img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
 </style>
 <!doctype html>
 <html lang="en" dir="rtl" data-bs-theme="dark">
@@ -194,59 +241,127 @@
         </div>
     </div>
 
-    <!-- projects -->
-    <div id="projects" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary">
-        <div class="container">
-            <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
-                <div class="max-w-xl mx-auto">
-                    <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl">
-                        Alguns dos Ramos que Atendemos
-                    </h2>
+<!-- projects -->
+<div id="projects" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary">
+    <div class="container">
+        <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl">
+                    Alguns dos Ramos que Atendemos
+                </h2>
+            </div>
+        </div>
+
+        <div class="row gy-5 gx-sm-5 row-cols-1 row-cols-sm-4 row-cols-md-4">
+            <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-2 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/AutoCenter.png"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
+                    </div>
+                    <a href="javascript:;"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        Auto Center
+                    </a>
                 </div>
             </div>
 
-            <div class="row gy-5 gx-sm-5 row-cols-1 row-cols-sm-3">
-                <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
-                    <div class="position-relative pt-2 image_png">
-                        <div class="ratio ratio-4x3">
-                            <img src="assets\img\bg\AutoCenter.png"
-                                class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
-                                loading="lazy">
-                        </div>
-                        <a href="javascript:;"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Auto Center
-                        </a>
+            <div class="col" data-aos-delay="100" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-2 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/AutoPeçaseMotoPeças.png"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
                     </div>
+                    <a href="javascript:;"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        AutoPeças e MotoPeças
+                    </a>
                 </div>
+            </div>
 
-                <div class="col" data-aos-delay="100" data-aos="fade" data-aos-duration="1000">
-                    <div class="position-relative pt-2 image_png">
-                        <div class="ratio ratio-4x3">
-                            <img src="assets\img\bg\AutoPeçaseMotoPeças.png"
-                                class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
-                                loading="lazy">
-                        </div>
-                        <a href="javascript:;"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            AutoPeças e MotoPeças
-                        </a>
+            <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-4 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/materialdeconstrucao.jpg"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
                     </div>
+                    <a href="assets/servicos/autocenter.html"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        Materiais Elétricos
+                    </a>
                 </div>
+            </div>
+            <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-4 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/materialdeconstrucao.jpg"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
+                    </div>
+                    <a href="assets/servicos/autocenter.html"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        Ferragens e Ferramentas
+                    </a>
+                </div>
+            </div>
+            <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-4 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/materialdeconstrucao.jpg"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
+                    </div>
+                    <a href="assets/servicos/autocenter.html"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        Materiais Elétricos
+                    </a>
+                </div>
+            </div>
+            <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-4 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/materialdeconstrucao.jpg"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
+                    </div>
+                    <a href="assets/servicos/autocenter.html"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        Materiais de Construçãoaaaaaaa
+                    </a>
+                </div>
+            </div>
 
-                <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
-                    <div class="position-relative pt-4 image_png">
-                        <div class="ratio ratio-4x3">
-                            <img src="assets\img\bg\materialdeconstrucao.jpg"
-                                class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
-                                loading="lazy">
-                        </div>
-                        <a href="assets/servicos/autocenter.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Materiais de Construçãoaaaaaaa
-                        </a>
+            <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-4 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/materialdeconstrucao.jpg"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
                     </div>
+                    <a href="assets/servicos/autocenter.html"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        Materiais de Construçãoaaaaaaaaaaaaaaaaaaaaaa
+                    </a>
                 </div>
+            </div>
+
+              <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                <div class="position-relative pt-4 image_png">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/img/bg/materialdeconstrucao.jpg"
+                            class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                            loading="lazy">
+                    </div>
+                    <a href="assets/servicos/autocenter.html"
+                        class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                        Materiais de Construçãoaaaaaaa
+                    </a>
+                </div>
+            </div>
+            
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4 image_png">
                         <div class="ratio ratio-4x3">

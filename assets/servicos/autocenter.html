@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carros Elétricos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* CSS existente */
         html, body {
             height: 100%;
             margin: 0;
+            box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
         }
         body {
             font-family: Arial, sans-serif;
@@ -24,21 +24,34 @@
             padding: 20px; /* Adiciona espaço interno ao cabeçalho */
             margin-bottom: 20px; /* Adiciona espaço abaixo do cabeçalho */
             text-align: center; /* Centraliza o texto no cabeçalho */
+            position: fixed; /* Fixa o cabeçalho no topo */
+            width: 100%; /* Garante que o cabeçalho ocupe a largura total */
+            top: 0; /* Alinha o cabeçalho no topo da página */
+            left: 0; /* Alinha o cabeçalho à esquerda da página */
+            z-index: 1000; /* Garante que o cabeçalho fique acima do restante do conteúdo */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil para destaque */
         }
         header h2 {
             margin: 0; /* Remove a margem padrão do <h2> */
+        }
+        .container {
+            margin: 100px auto 20px; /* Adiciona margem superior para compensar o cabeçalho fixo */
+            padding: 0 20px; /* Adiciona algum preenchimento nas laterais */
+            max-width: 1200px; /* Define uma largura máxima para a container */
+            width: 100%; /* Garante que o container ocupe a largura total disponível */
         }
         .section {
             display: flex;
             align-items: center;
             margin: 30px 0;
-            flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas pequenas */
+            flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas menores */
         }
         .section img {
             width: 100%;
             max-width: 200px; /* Máximo de largura para as imagens */
             height: auto;
             margin-right: 20px;
+            border-radius: 8px;
         }
         .section .text {
             flex: 1;
@@ -48,36 +61,10 @@
             color: #e77e23;
             margin-bottom: 10px;
         }
-        .section .text p {
-            /*color: #555;*/
+        .section .text p, .section .text li {
             margin: 0;
-        }
-        .main-content {
-            flex: 1;
-            width: 100%;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-        .col {
-            flex: 1;
-            padding: 15px;
-            box-sizing: border-box;
-        }
-        .col img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .col h2 {
-            color: #ccc; /* Cor do título */
+            list-style-type: disc;
+            padding-left: 20px;
         }
         footer {
             background: #333; /* Cor de fundo */
@@ -92,13 +79,6 @@
             margin: 0; /* Remove a margem padrão do parágrafo */
             font-size: 14px; /* Ajusta o tamanho da fonte */
             line-height: 1.5; /* Melhora a legibilidade */
-        }
-        .image-text {
-            display: flex;
-            align-items: center;
-        }
-        .image-text img {
-            margin-right: 20px;
         }
         .btn-voltar, .btn-faleconosco {
             display: inline-flex;
@@ -151,19 +131,17 @@
 
         /* Media Queries para Responsividade */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 20px;
-            }
             .section {
                 flex-direction: column; /* Alinha as seções verticalmente em telas menores */
                 text-align: center;
             }
             .section img {
                 margin: 0 0 20px 0;
+                max-width: 50%; /* Garante que a imagem não ultrapasse o container */
             }
             .container {
-                width: 90%;
-                padding-bottom: 80px; /* Ajusta o espaço inferior para telas menores */
+                width: 95%;
+                margin-top: 120px; /* Ajusta a margem superior para telas menores */
             }
             .btn-voltar, .btn-faleconosco {
                 padding: 8px 16px;
@@ -175,12 +153,8 @@
         }
         
         @media (max-width: 480px) {
-            .header h1 {
-                font-size: 18px;
-            }
             .section img {
-                width: 100%;
-                max-width: none;
+                max-width: 100%; /* Garante que a imagem não ultrapasse o container */
             }
             .btn-voltar, .btn-faleconosco {
                 padding: 6px 12px;
@@ -190,9 +164,8 @@
                 bottom: 50px; /* Ajuste conforme necessário */
             }
         }
-
-        /* CSS Adicional para a Header */
-        .header ul {
+         /* CSS Adicional para a Header */
+         .header ul {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -213,12 +186,10 @@
             text-align: right; /* Alinha o último item à direita */
         }
     </style>
-
 </head>
 <body>
-    
     <header>
-     <h2> Material para Construção</h2>
+        <h2>Material para Construção</h2>
     </header>
 
     <div class="container">
@@ -232,46 +203,51 @@
             </div>
         </div>
 <hr>
+
+    <div class="container">
         <div class="section">
-            <img src="../assets/img/bg/entrada_nota.jpg" alt="Entrada de Nota Fiscal">
+            <img src="/assets/img/bg/entrada_nota.png" alt="Entrada de Nota Fiscal">
             <div class="text">
                 <h2>Entrada de Nota Fiscal</h2>
-                <li>No módulo de entrada de Nota Fiscal, abra o arquivo XML do fornecedor e realize todos os trâmites antes da mercadoria chegar na empresa: cadastre produtos, gerencie preços, conversões de embalagens, previsão de entrega para o setor de vendas e gere o contas a pagar de forma automatizada.</li>
+                <p>No módulo de entrada de Nota Fiscal, abra o arquivo XML do fornecedor e realize todos os trâmites antes da mercadoria chegar na empresa: cadastre produtos, gerencie preços, conversões de embalagens, previsão de entrega para o setor de vendas e gere o contas a pagar de forma automatizada.</p>
             </div>
         </div>
 
         <div class="section">
-            <img src="historico_cliente.png" alt="Histórico de Cliente">
+            <img src="/assets/img/bg/historico_cliente.png" alt="Histórico de Cliente">
             <div class="text">
                 <h2>Histórico de Cliente</h2>
-                <li>Acompanhe o histórico de compra do seu cliente, incluindo o total de vendas canceladas, produtos devolvidos, produtos mais comprados, contas a receber, contas em atraso, atraso médio, juros recebidos, saldo de limite de crédito e classificação do cliente na curva ABC.</li>
+                <p>Acompanhe o histórico de compra do seu cliente, incluindo o total de vendas canceladas, produtos devolvidos, produtos mais comprados, contas a receber, contas em atraso, atraso médio, juros recebidos, saldo de limite de crédito e classificação do cliente na curva ABC.</p>
             </div>
         </div>
 
         <div class="section">
-            <img src="gestao_comissoes.png" alt="Gestão de Comissões">
+            <img src="/assets/img/bg/gestao_comissao.png" alt="Gestão de Comissões">
             <div class="text">
                 <h2>Gestão de Comissões</h2>
-                <li>Tenha a flexibilidade de escolher o melhor modelo de comissão para sua equipe de vendas, seja por Produto, por vendedor, por forma de pagamento, por grupo de produto, sub-grupo de produtos, por região e por recebimento.</li>
+                <p>Tenha a flexibilidade de escolher o melhor modelo de comissão para sua equipe de vendas, seja por Produto, por vendedor, por forma de pagamento, por grupo de produto, sub-grupo de produtos, por região e por recebimento.</p>
             </div>
         </div>
 
         <div class="section">
-            <img src="gestao_comissoes.png" alt="Gestão de Comissões">
+            <img src="/assets/img/bg/multi_lojas.png" alt="Plataforma Multi Lojas">
             <div class="text">
                 <h2>Plataforma Multi Lojas</h2>
-                <li>Gerencie múltiplas lojas de forma integrada, compartilhe dados de clientes, produtos e informações de vendas, gerencie estoque, preços e condições de vendas diferenciadas para cada loja.</li>
+                <p>Gerencie múltiplas lojas de forma integrada, compartilhe dados de clientes, produtos e informações de vendas, gerencie estoque, preços e condições de vendas diferenciadas para cada loja.</p>
             </div>
         </div>
 
         <div class="section">
-            <img src="gestao_comissoes.png" alt="Gestão de Comissões">
+            <img src="/assets/img/bg/diferencial.png" alt="Nosso Diferencial">
             <div class="text">
-                <h2> NOSSO DIFERENCIAL</h2>
-                <strong>Facilidade de Uso:</strong><li>Gerencie múltiplas lojas de forma integrada, compartilhe dados de clientes, produtos e informações de vendas, gerencie estoque, preços e condições de vendas diferenciadas para cada loja.</p>
+                <h2>Nosso Diferencial</h2>
+                <p><strong>Facilidade de Uso:</strong> O NossoERP tem uma interface intuitiva e amigável.</p>
+                <p><strong>Suporte Dedicado:</strong> Garantindo que as dificuldades e as dúvidas sejam sanadas o mais rápido possível.</p>
+                <p><strong>Atualizações Constantes:</strong> Atualizado com as últimas funcionalidades e com as últimas regulamentações fiscais.</p>
+                <p><strong>Estabilidade:</strong> Plataforma estável e eficiente, eliminando paralizações indesejadas.</p>
             </div>
         </div>
-</div>
+    </div>
     <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
         <a href="https://wa.me/556921414110" class="btn-faleconosco">
             Fale Conosco
