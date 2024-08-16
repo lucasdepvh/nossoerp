@@ -162,6 +162,35 @@
         height: 100%;
         object-fit: cover;
     }
+
+    /* Garante que a imagem e o conteúdo preencham a altura total do cartão */
+    .position-relative {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        /* Garante que o contêiner interno preencha a altura total do cartão */
+    }
+
+    .ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 75%;
+        /* Proporção 4:3 */
+    }
+
+
+
+    .image-with-border {
+        border: 2px solid white;
+        /* Borda branca ao redor do cartão */
+        padding: 10px;
+        /* Espaçamento interno para a borda não colidir com a imagem */
+        margin: 0 10px 20px 10px;
+        /* Espaçamento externo: 10px lateral e 20px inferior */
+        background-color: transparent;
+        /* Fundo transparente para manter a cor original */
+    }
 </style>
 
 </style>
@@ -256,29 +285,30 @@
 
             <div class="row gy-5 gx-sm-5 row-cols-1 row-cols-sm-4 row-cols-md-4">
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
-                    <div class="position-relative pt-4 image_png">
+                    <div class="position-relative pt-4 image_png image-with-border">
                         <div class="ratio ratio-4x3">
-                            <img src="assets/img/bg/auto_center-removebg-preview.png"
+                            <img src="assets/img/bg/distribuidora.png"
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autopecas.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Auto Center
+                            Distribuidoras e Atacadistas
                         </a>
                     </div>
                 </div>
+
 
                 <div class="col" data-aos-delay="100" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4 image_png">
                         <div class="ratio ratio-4x3">
-                            <img src="assets/img/bg/tinta-removebg-preview.png"
+                            <img src="assets/img/bg/motossera.png"
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autocenter.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Comércio de Tintas
+                            Lojas de Motosserra
                         </a>
                     </div>
                 </div>
@@ -286,33 +316,33 @@
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4 image_png">
                         <div class="ratio ratio-4x3">
-                            <img src="/assets/img/bg/materiais_eletricos.png"
+                            <img src="assets/img/bg/odontologicos.png"
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autocenter.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Materiais Elétricos
+                            Materiais Odontologicos e Hospitalar
                         </a>
                     </div>
                 </div>
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4 image_png">
                         <div class="ratio ratio-4x3">
-                            <img src="assets/img/bg/Ferragens_e_Ferramentas-removebg-preview (1).png"
+                            <img src="assets/img/bg/construcao.png"
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autocenter.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Ferragens e Ferramentas
+                            Material de Construção
                         </a>
                     </div>
                 </div>
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4 image_png">
-                        <div class="ratio ratio-4x3">
-                            <img src="assets/img/bg/mercado-removebg-preview.png"
+                        <div class="ratio ratio-4x1">
+                            <img src="assets/img/bg/supermercado.png"
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
                                 loading="lazy">
                         </div>
@@ -331,7 +361,7 @@
                         </div>
                         <a href="assets/servicos/supermercado.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Mini Mercado
+                            Marmoraria
                         </a>
                     </div>
                 </div>
@@ -339,13 +369,13 @@
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4 image_png">
                         <div class="ratio ratio-4x3">
-                            <img src="assets/img/bg/AutoPeçaseMotoPeças-removebg-preview.png"
+                            <img src="assets/img/bg/motopecas.png"
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autocenter.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Moto Peças
+                            AutoPeças e MotoPeças
                         </a>
                     </div>
                 </div>
@@ -359,7 +389,7 @@
                         </div>
                         <a href="assets/servicos/autopecas.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Auto Peças
+                            Auto Center
                         </a>
                     </div>
                 </div>
@@ -372,7 +402,7 @@
                         </div>
                         <a href="javascript:;"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Materiais de Construçãooooooooo
+                            Agropecuária
                         </a>
                     </div>
                 </div>
@@ -385,7 +415,7 @@
                         </div>
                         <a href="javascript:;"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Materiais de Construçãoooooooooo
+                            Ferragens e Ferramentas
                         </a>
                     </div>
                 </div>
@@ -398,7 +428,20 @@
                         </div>
                         <a href="javascript:;"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Materiais de Construçãoooooooooo
+                            Materiais Elétricos
+                        </a>
+                    </div>
+                </div>
+                <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                    <div class="position-relative pt-4 image_png">
+                        <div class="ratio ratio-4x3">
+                            <img src="assets/img/bg/papelaria.png"
+                                class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                                loading="lazy">
+                        </div>
+                        <a href="assets/servicos/supermercado.html"
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            Papelarias
                         </a>
                     </div>
                 </div>
@@ -411,7 +454,46 @@
                         </div>
                         <a href="assets/servicos/supermercado.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
-                            Açougue
+                            Materiais de Limpeza
+                        </a>
+                    </div>
+                </div>
+                <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                    <div class="position-relative pt-4 image_png">
+                        <div class="ratio ratio-4x3">
+                            <img src="assets/img/bg/bifezao.png"
+                                class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                                loading="lazy">
+                        </div>
+                        <a href="assets/servicos/supermercado.html"
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            Artigos e Presentes
+                        </a>
+                    </div>
+                </div>
+                <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                    <div class="position-relative pt-4 image_png">
+                        <div class="ratio ratio-4x3">
+                            <img src="assets/img/bg/bifezao.png"
+                                class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                                loading="lazy">
+                        </div>
+                        <a href="assets/servicos/supermercado.html"
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            Confecções e Calçados
+                        </a>
+                    </div>
+                </div>
+                <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                    <div class="position-relative pt-4 image_png">
+                        <div class="ratio ratio-4x3">
+                            <img src="assets/img/bg/bifezao.png"
+                                class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5" alt="template"
+                                loading="lazy">
+                        </div>
+                        <a href="assets/servicos/supermercado.html"
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            Materiais Odontologicos e Hospitalar
                         </a>
                     </div>
                 </div>
