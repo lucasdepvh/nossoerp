@@ -179,8 +179,6 @@
         /* Proporção 4:3 */
     }
 
-
-
     .image-with-border {
         border: 2px solid white;
         /* Borda branca ao redor do cartão */
@@ -264,12 +262,13 @@
             /* Exibe 1 card por slide em telas muito pequenas */
         }
     }
+
     .section .text {
         flex: 1;
         /* Permite que o texto ocupe o espaço restante disponível ao lado da imagem */
     }
-    
-    .section .text p, 
+
+    .section .text p,
     .section .text li {
         margin: 0;
         list-style-type: disc;
@@ -277,14 +276,27 @@
         /* Define o estilo da lista e o preenchimento interno dos parágrafos */
     }
 
+
+    .text-with-image {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .text-with-image p {
+        flex: 1;
+        margin-right: 15px;
+    }
+
     .img_integracao {
         width: 60px;
         height: 60px;
         /* Define a largura e altura das imagens */
-        object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
-        margin: 5px; /* Espaço entre as imagens */
+        object-fit: cover;
+        /* Garante que a imagem preencha a área sem distorção */
+        margin: 5px;
+        /* Espaço entre as imagens */
     }
-
 </style>
 <!doctype html>
 <html lang="en" dir="rtl" data-bs-theme="dark">
@@ -765,20 +777,23 @@
                                 <div class="row">
                                     <!-- Coluna Esquerda -->
                                     <div class="col-md-6">
-                                        <div class="mx-auto max-w-2xl mt-6">
+
+                                        <!-- Espaço para as imagens dos parceiros -->
+                                        <div class="mt-6 text-with-image">
                                             <div class="text">
-                                                <h2>Agilize as Transações Financeiras</h2>
-                                                <p>Agilize as transações financeiras com cartões de crédito e ofereça mais opções de pagamento aos seus clientes.</p>
+                                                <!-- Adicione suas imagens aqui -->
+                                                Agilize as transações financeiras com cartões de credito e ofereça mais
+                                                opções de pagamento aos seus clientes.
+                                                <img src="/assets/img/bg/tef.png" alt="Parceiro 1"
+                                                    class="img_integracao">
                                             </div>
                                         </div>
 
-                                        <!-- Espaço para as imagens dos parceiros -->
-                                        <div class="mt-6 text-center">
-                                            <!-- Adicione suas imagens aqui -->
-                                            <img src="/assets\img\bg\Busca-Preco_1.png" alt="Parceiro 1"
+                                        <div class="mt-6 text-with-image">
+
+                                            Mantenha-se competitivo atualizando rapidamente os preços na gôndola.
+                                            <img src="/assets\img\bg\Busca-Preco_1.png " alt="Parceiro 2"
                                                 class="img_integracao">
-                                            <img src="caminho/para/imagem2.jpg" alt="Parceiro 2"
-                                                class="img-max-width-210">
                                             <!-- Continue adicionando imagens conforme necessário -->
                                         </div>
                                     </div>
@@ -790,7 +805,8 @@
                                                 Integrações NossoERP
                                             </h2>
                                             <p class="m-0 mt-4 text-lg leading-8 text-center">
-                                                O sistema de gestão NossoERP conta com várias integrações que agregam
+                                                O sistema de gestão NossoERP conta com várias integrações que
+                                                agregam
                                                 eficiência, segurança e produtividade na operação da sua empresa.
                                             </p>
                                         </div>
@@ -800,17 +816,17 @@
                                             <!-- Adicione suas imagens e textos aqui -->
                                             <img src="assets\img\bg\parceiros1.png" alt="Parceiro 3"
                                                 class="img-max-width-210">
-                                                <img src="assets\img\bg\parceiro2.png" alt="Parceiro 3"
+                                            <img src="assets\img\bg\parceiro2.png" alt="Parceiro 3"
                                                 class="img-max-width-210">
-                                                <img src="assets\img\bg\parceiro3.png" alt="Parceiro 3"
+                                            <img src="assets\img\bg\parceiro3.png" alt="Parceiro 3"
                                                 class="img-max-width-210">
-                                                <img src="assets\img\bg\parceiro4.png" alt="Parceiro 3"
+                                            <img src="assets\img\bg\parceiro4.png" alt="Parceiro 3"
                                                 class="img-max-width-210">
-                                                <img src="assets\img\bg\parceiro6.png" alt="Parceiro 3"
+                                            <img src="assets\img\bg\parceiro6.png" alt="Parceiro 3"
                                                 class="img-max-width-210">
-                                                <img src="assets\img\bg\parceiro5.png" alt="Parceiro 3"
+                                            <img src="assets\img\bg\parceiro5.png" alt="Parceiro 3"
                                                 class="img-max-width-210">
-                                        
+
                                             <!-- Continue adicionando conforme necessário -->
                                         </div>
                                     </div>
