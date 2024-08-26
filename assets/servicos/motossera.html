@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS existente */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            /* Inclui padding e border no cálculo da largura */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #262626;
+            /* Cor de fundo ajustada */
+            color: #f4f4f4;
+            /* Cor de texto ajustada para contraste */
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #f57c00;
+            /* Cor laranja */
+            color: #fff;
+            padding: 20px;
+            /* Adiciona espaço interno ao cabeçalho */
+            margin-bottom: 20px;
+            /* Adiciona espaço abaixo do cabeçalho */
+            text-align: center;
+            /* Centraliza o texto no cabeçalho */
+            position: fixed;
+            /* Fixa o cabeçalho no topo */
+            width: 100%;
+            /* Garante que o cabeçalho ocupe a largura total */
+            top: 0;
+            /* Alinha o cabeçalho no topo da página */
+            left: 0;
+            /* Alinha o cabeçalho à esquerda da página */
+            z-index: 1000;
+            /* Garante que o cabeçalho fique acima do restante do conteúdo */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            /* Adiciona uma sombra sutil para destaque */
+        }
+
+        header h2 {
+            margin: 0;
+            /* Remove a margem padrão do <h2> */
+        }
+
+        .container {
+            margin: 100px auto 20px;
+            /* Adiciona margem superior para compensar o cabeçalho fixo */
+            padding: 0 20px;
+            /* Adiciona algum preenchimento nas laterais */
+            max-width: 1200px;
+            /* Define uma largura máxima para a container */
+            width: 100%;
+            /* Garante que o container ocupe a largura total disponível */
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            /* Permite que os itens quebrem para a linha seguinte em telas menores */
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 200px;
+            /* Máximo de largura para as imagens */
+            height: auto;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .section .text {
+            flex: 1;
+        }
+
+        .section .text h2 {
+            font-size: 20px;
+            color: #e77e23;
+            margin-bottom: 10px;
+        }
+
+        .section .text p,
+        .section .text li {
+            margin: 0;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        footer {
+            background: #333;
+            /* Cor de fundo */
+            color: #fff;
+            /* Cor do texto */
+            text-align: center;
+            /* Centraliza o texto */
+            padding: 20px;
+            /* Adiciona espaçamento interno */
+            width: 100%;
+            /* Garante que o footer ocupe a largura total */
+            box-sizing: border-box;
+            /* Inclui o padding no cálculo da largura */
+            position: relative;
+            /* Garante que o footer não sobreponha o botão fixo */
+        }
+
+        footer p {
+            margin: 0;
+            /* Remove a margem padrão do parágrafo */
+            font-size: 14px;
+            /* Ajusta o tamanho da fonte */
+            line-height: 1.5;
+            /* Melhora a legibilidade */
+        }
+
+        .btn-voltar,
+        .btn-faleconosco {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            background-color: #f57c00;
+            /* Cor laranja */
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            position: fixed;
+            z-index: 1000;
+            /* Garante que os botões fiquem acima do conteúdo */
+        }
+
+        .btn-voltar {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .btn-faleconosco {
+            right: 20px;
+            bottom: 80px;
+            /* Ajuste conforme necessário */
+            animation: alerta 2s infinite;
+            /* Adiciona animação pulsante */
+        }
+
+        .btn-voltar i,
+        .btn-faleconosco i {
+            margin-right: 8px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #e64a19;
+            /* Cor laranja mais escura ao passar o mouse */
+            transform: scale(1.05);
+        }
+
+        .btn-voltar:active {
+            background-color: #d84315;
+            /* Cor laranja ainda mais escura quando clicado */
+        }
+
+        @keyframes alerta {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 #f59e44;
+            }
+
+            70% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 5px #f59e44;
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 #f59e44;
+            }
+        }
+
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                /* Alinha as seções verticalmente em telas menores */
+                text-align: center;
+            }
+
+            .section img {
+                margin: 0 0 20px 0;
+                max-width: 40%;
+                /* Garante que a imagem não ultrapasse o container */
+            }
+
+            .container {
+                width: 95%;
+                margin-top: 120px;
+                /* Ajusta a margem superior para telas menores */
+            }
+
+            .btn-voltar,
+            .btn-faleconosco {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .btn-faleconosco {
+                bottom: 60px;
+                /* Ajuste conforme necessário */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section img {
+                max-width: 100%;
+                /* Garante que a imagem não ultrapasse o container */
+            }
+
+            .btn-voltar,
+            .btn-faleconosco {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .btn-faleconosco {
+                bottom: 50px;
+                /* Ajuste conforme necessário */
+            }
+        }
+
+        /* CSS Adicional para a Header */
+        .header ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            /* Distribui os itens igualmente ao longo da linha */
+        }
+
+        .header ul li {
+            flex: 1;
+            /* Faz com que os itens ocupem o espaço disponível */
+            text-align: center;
+            /* Centraliza o texto dentro de cada item */
+        }
+
+        .header ul li.left {
+            text-align: left;
+            /* Alinha o primeiro item à esquerda */
+        }
+
+        .header ul li.center {
+            text-align: center;
+            /* Alinha o item do meio ao centro */
+        }
+
+        .header ul li.right {
+            text-align: right;
+            /* Alinha o último item à direita */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Motossera</h2>
+    </header>
+
+    <div class="container">
+        <div class="container">
+            <div class="section">
+                <img src="/assets/img/bg/entrada_nota.png" alt="Entrada de Nota Fiscal">
+                <div class="text">
+                    <h2>Entrada de Nota Fiscal</h2>
+                    <p>No módulo de entrada de Nota Fiscal, abra o arquivo XML do fornecedor e realize todos os trâmites
+                        antes da mercadoria chegar na empresa: cadastre produtos, gerencie preços, conversões de
+                        embalagens, previsão de entrega para o setor de vendas e gere o contas a pagar de forma
+                        automatizada.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <img src="/assets/img/bg/historico_cliente.PNG" alt="Histórico de Cliente">
+                <div class="text">
+                    <h2>Histórico de Cliente</h2>
+                    <p>Acompanhe o histórico de compra do seu cliente, incluindo o total de vendas canceladas, produtos
+                        devolvidos, produtos mais comprados, contas a receber, contas em atraso, atraso médio, juros
+                        recebidos, saldo de limite de crédito e classificação do cliente na curva ABC.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <img src="/assets/img/bg/gestao_comissao.PNG" alt="Gestão de Comissões">
+                <div class="text">
+                    <h2>Gestão de Comissões</h2>
+                    <p>Tenha a flexibilidade de escolher o melhor modelo de comissão para sua equipe de vendas, seja por
+                        Produto, por vendedor, por forma de pagamento, por grupo de produto, sub-grupo de produtos, por
+                        região e por recebimento.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <img src="/assets/img/bg/multi_lojas.PNG" alt="Plataforma Multi Lojas">
+                <div class="text">
+                    <h2>Plataforma Multi Lojas</h2>
+                    <p>Gerencie múltiplas lojas de forma integrada, compartilhe dados de clientes, produtos e
+                        informações de vendas, gerencie estoque, preços e condições de vendas diferenciadas para cada
+                        loja.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <img src="/assets/img/bg/diferencial.PNG" alt="Nosso Diferencial">
+                <div class="text">
+                    <h2>Nosso Diferencial</h2>
+                    <p><strong>Facilidade de Uso:</strong> O NossoERP tem uma interface intuitiva e amigável.</p>
+                    <p><strong>Suporte Dedicado:</strong> Garantindo que as dificuldades e as dúvidas sejam sanadas o
+                        mais rápido possível.</p>
+                    <p><strong>Atualizações Constantes:</strong> Atualizado com as últimas funcionalidades e com as
+                        últimas regulamentações fiscais.</p>
+                    <p><strong>Estabilidade:</strong> Plataforma estável e eficiente, eliminando paralizações
+                        indesejadas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
+            <a href="https://wa.me/556921414110" class="btn-faleconosco">
+                Fale Conosco
+            </a>
+        </div>
+        <footer>
+            <p>&copy; Para mais informações, entre em contato conosco
+                e agende uma visita para demonstração do
+                NossoERP.</p>
+        </footer>
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
