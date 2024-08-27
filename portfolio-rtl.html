@@ -11,7 +11,6 @@
     .container {
         width: 80%;
         margin: 0 auto;
-        padding: 20px;
     }
 
     .section {
@@ -204,26 +203,6 @@
         flex-direction: column;
     }
 
-    .carousel-inner {
-        display: flex;
-    }
-
-    .carousel-item {
-        display: flex;
-        flex-wrap: nowrap;
-        /* Garante que os itens não quebrem para a linha seguinte */
-        overflow: hidden;
-    }
-
-    .carousel-item .card {
-        flex: 0 0 30%;
-        /* Exibe 3 cards por slide */
-        margin-right: 10px;
-        /* Espaçamento entre os cards */
-        margin-bottom: 20px;
-        /* Espaçamento inferior */
-    }
-
     .card-body {
         padding: 20px;
         /* Adiciona padding ao corpo do card */
@@ -246,36 +225,6 @@
         /* Espaçamento entre os itens da lista */
     }
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 5%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Fundo semi-transparente para destaque */
-        border-radius: 50%;
-        z-index: 1000;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        background-color: rgba(255, 255, 255, 0.5);
-        /* Fundo branco semi-transparente */
-        border-radius: 50%;
-    }
-
-    /* Media Queries */
-    @media (max-width: 1199px) {
-        .carousel-item .card {
-            flex: 0 0 45%;
-            /* Exibe 2 cards por slide em telas menores */
-        }
-    }
-
-    @media (max-width: 767px) {
-        .carousel-item .card {
-            flex: 0 0 90%;
-            /* Exibe 1 card por slide em telas muito pequenas */
-        }
-    }
 
     .section .text {
         flex: 1;
@@ -311,13 +260,15 @@
         margin: 5px;
         /* Espaço entre as imagens */
     }
-       /* Estilo padrão para todos os botões */
-       .btn {
+
+    /* Estilo padrão para todos os botões */
+    .btn {
         margin: 0.5rem;
     }
 
     /* Estilo para telas pequenas */
     @media (max-width: 576px) {
+
         /* Ajusta os botões para uma coluna em telas muito pequenas */
         .d-flex {
             flex-direction: column;
@@ -325,12 +276,14 @@
         }
 
         .btn {
-            margin: 0.5rem 0; /* Margem superior e inferior para botões em coluna */
+            margin: 0.5rem 0;
+            /* Margem superior e inferior para botões em coluna */
         }
     }
 
     /* Estilo para telas médias */
     @media (min-width: 576px) and (max-width: 768px) {
+
         /* Ajusta os botões para 2 colunas em telas pequenas */
         .d-flex {
             flex-wrap: wrap;
@@ -338,13 +291,16 @@
         }
 
         .btn {
-            flex: 1 1 calc(50% - 1rem); /* Cada botão ocupa 50% da largura com espaço para margem */
-            margin: 0.5rem 0.5rem; /* Margem ao redor dos botões */
+            flex: 1 1 calc(50% - 1rem);
+            /* Cada botão ocupa 50% da largura com espaço para margem */
+            margin: 0.5rem 0.5rem;
+            /* Margem ao redor dos botões */
         }
     }
 
     /* Estilo para telas grandes */
     @media (min-width: 768px) {
+
         /* Ajusta os botões para 4 colunas em telas grandes */
         .d-flex {
             flex-wrap: wrap;
@@ -352,22 +308,350 @@
         }
 
         .btn {
-            flex: 1 1 calc(25% - 1rem); /* Cada botão ocupa 25% da largura com espaço para margem */
-            margin: 0.5rem; /* Margem ao redor dos botões */
+            flex: 1 1 calc(25% - 1rem);
+            /* Cada botão ocupa 25% da largura com espaço para margem */
+            margin: 0.5rem;
+            /* Margem ao redor dos botões */
         }
     }
-    
-   /* Classe para o botão ativo */
-   .btn-active {
-        background-color: #0056b3; /* Cor mais escura para o botão ativo */
-        border-color: #0056b3; /* Cor da borda correspondente */
-        color: #fff; /* Texto branco para contraste */
+
+    /* Classe para o botão ativo */
+    .btn-active {
+        background-color: #0056b3;
+        /* Cor mais escura para o botão ativo */
+        border-color: #0056b3;
+        /* Cor da borda correspondente */
+        color: #fff;
+        /* Texto branco para contraste */
     }
 
     /* Efeito de transição para suavizar a mudança de cor */
     .btn-active {
         transition: background-color 0.3s ease, border-color 0.3s ease;
     }
+
+    /* Estilos para o contêiner principal */
+    .call-to-action-background {
+        background-color: #c4c4c4;
+        /* Fundo branco */
+        color: #000;
+        /* Texto preto */
+        position: relative;
+        padding: 2rem;
+        /* Ajuste o padding conforme necessário */
+    }
+
+    /* Garantir que as imagens se ajustem e não sobreponham o texto */
+    .call-to-action-background .text-with-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Estilo para garantir que o texto esteja visível */
+    .call-to-action-background .text {
+        color: #000;
+        /* Texto preto */
+    }
+
+    /* Estilos para o ícone flutuante */
+    .floating-icon {
+        position: fixed;
+        /* Mantém o ícone fixo na tela */
+        bottom: 20px;
+        /* Distância do fundo da página */
+        right: 20px;
+        /* Distância da borda direita da página */
+        z-index: 9999;
+        /* Garante que o ícone esteja sempre visível acima de outros elementos */
+    }
+
+    .floating-icon a {
+        display: block;
+        width: 60px;
+        /* Ajuste o tamanho do ícone conforme necessário */
+        height: 60px;
+        background-color: #EB7318;
+        /* Cor de fundo do ícone, se necessário */
+        border-radius: 50%;
+        /* Forma redonda */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Sombra para efeito de profundidade */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .floating-icon img {
+        width: 30px;
+        /* Ajuste o tamanho do ícone conforme necessário */
+        height: auto;
+        filter: brightness(0) invert(1);
+        /* Torna o ícone branco se necessário */
+    }
+
+    .floating-icon .tooltip {
+        display: none;
+        /* Inicialmente escondido */
+        position: absolute;
+        bottom: 70px;
+        /* Distância do ícone */
+        right: 0;
+        background-color: #333;
+        /* Cor de fundo do balão */
+        color: #fff;
+        /* Cor do texto */
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+        /* Impede a quebra de linha */
+        z-index: 10000;
+        /* Garante que o tooltip esteja acima do ícone */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Sombra para efeito de profundidade */
+    }
+
+    /* Mostrar o balão ao passar o mouse sobre o ícone */
+    .floating-icon:hover .tooltip {
+        display: block;
+    }
+
+    /* Estiliza os cartões */
+    .card {
+        display: flex;
+        /* Usado para o flexbox */
+        flex-direction: column;
+        /* Alinha o conteúdo verticalmente */
+        height: 100%;
+        /* Garante que o cartão ocupe a altura total da coluna */
+        background-color: #ffffff;
+        /* Fundo branco para os cartões */
+        border: 1px solid #ddd;
+        /* Borda leve para definir o cartão */
+        border-radius: 0.5rem;
+        /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Sombra leve */
+        padding: 1.5rem;
+        /* Espaçamento interno */
+        box-sizing: border-box;
+        /* Inclui padding e borda na largura total */
+    }
+
+    .card-body {
+        flex: 1;
+        /* Faz com que o corpo do cartão expanda para ocupar o espaço disponível */
+    }
+
+    .card h3 {
+        margin-top: 0;
+        /* Remove margem superior */
+        margin-bottom: 1rem;
+        /* Margem inferior para espaçamento */
+    }
+
+    .card ul {
+        list-style-type: none;
+        /* Remove marcadores padrão da lista */
+        padding-left: 0;
+        /* Remove padding padrão */
+    }
+
+    .card ul li {
+        margin-bottom: 0.5rem;
+        /* Espaçamento entre os itens da lista */
+    }
+
+    /* Ajusta as colunas para garantir que todos os cartões sejam do mesmo tamanho */
+    .row {
+        display: flex;
+        /* Flexbox para a linha */
+        flex-wrap: wrap;
+        /* Permite que as colunas se movam para a linha seguinte se necessário */
+    }
+
+    .col-md-4 {
+        display: flex;
+        /* Flexbox para as colunas */
+        align-items: stretch;
+        /* Garante que todos os cartões dentro da coluna tenham a mesma altura */
+    }
+
+    /* Garantir que todos os cartões na mesma linha tenham o mesmo tamanho */
+    .col-md-4 .card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    /* Contêiner do texto e imagem */
+    .text-with-image {
+        display: flex;
+        /* Usado para alinhar o texto e a imagem lado a lado */
+        align-items: flex-start;
+        /* Alinha o texto e a imagem ao topo */
+        margin-bottom: 1.5rem;
+        /* Espaçamento entre os blocos */
+    }
+
+    /* Título pequeno */
+    .text-with-image .text .small-title {
+        font-size: 1.125rem;
+        /* Tamanho do título pequeno */
+        font-weight: 600;
+        /* Peso da fonte para o título pequeno */
+        margin-bottom: 0.5rem;
+        /* Espaçamento abaixo do título pequeno */
+    }
+
+    /* Texto principal */
+    .text-with-image .text .main-text {
+        font-size: 1rem;
+        /* Tamanho do texto principal */
+        line-height: 1.6;
+        /* Altura da linha para melhorar a legibilidade */
+    }
+
+    /* Estilo da imagem */
+    .img_integracao {
+        max-width: 150px;
+        /* Largura máxima para a imagem */
+        height: auto;
+        /* Mantém a proporção da imagem */
+        display: block;
+        /* Remove espaço embaixo da imagem */
+        margin-left: 1rem;
+        /* Espaçamento à esquerda da imagem para separar do texto */
+    }
+
+    /* Estilo para centralizar o conteúdo dentro da coluna */
+    .col-md-6 {
+        display: flex;
+        /* Flexbox para a coluna */
+        flex-direction: column;
+        /* Organiza os itens verticalmente */
+        align-items: flex-start;
+        /* Alinha os itens à esquerda */
+    }
+
+    /* Estilo padrão para as imagens */
+    .img-max-width-210 {
+        max-width: 210px;
+        /* Largura máxima das imagens */
+        height: auto;
+        /* Mantém a proporção da imagem */
+        margin: 0.5rem;
+        /* Espaçamento ao redor das imagens */
+        display: inline-block;
+        /* Mantém as imagens na linha e evita quebras */
+    }
+
+    /* Media Query para telas pequenas (tablets) */
+    @media (max-width: 768px) {
+        .img-max-width-210 {
+            max-width: 150px;
+            /* Reduz a largura máxima das imagens */
+            margin: 0.3rem;
+            /* Reduz o espaçamento ao redor das imagens */
+        }
+    }
+
+    /* Media Query para telas muito pequenas (smartphones) */
+    @media (max-width: 576px) {
+        .img-max-width-210 {
+            max-width: 100px;
+            /* Reduz ainda mais a largura máxima das imagens */
+            margin: 0.2rem;
+            /* Reduz ainda mais o espaçamento ao redor das imagens */
+        }
+
+        /* Garante que as imagens se ajustem no container */
+        .mt-6 {
+            text-align: center;
+            /* Centraliza as imagens no container */
+        }
+
+        /* Ajusta o comportamento das imagens no container */
+        .mt-6 img {
+            display: block;
+            /* Exibe as imagens em blocos para evitar quebras */
+            margin: 0 auto;
+            /* Centraliza as imagens no container */
+        }
+    }
+/* Garante que o footer ocupe toda a largura da tela */
+.footer {
+    background-color: #333; /* Cor de fundo do footer */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento interno */
+    position: relative;
+    width: 100%; /* Largura total do footer */
+    text-align: left; /* Alinhamento do texto */
+    bottom: 0; /* Fixa o footer na parte inferior */
+    left: 0; /* Alinha o footer à esquerda */
+}
+
+/* Contêiner do conteúdo do footer */
+.footer-content {
+    display: flex; /* Flexbox para alinhar as seções */
+    justify-content: space-between; /* Espaçamento entre as seções */
+    flex-wrap: wrap; /* Permite que as seções se movam para a linha seguinte em telas pequenas */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 0 15px; /* Espaçamento interno lateral */
+}
+
+/* Seções do footer */
+.footer-section {
+    flex: 1; /* Flexível para ajustar o tamanho das seções */
+    margin: 0 15px; /* Margem ao redor das seções */
+    min-width: 150px; /* Largura mínima para evitar que as seções fiquem muito pequenas */
+}
+
+.footer-section h4 {
+    margin-bottom: 10px; /* Espaçamento abaixo dos títulos */
+}
+
+.footer-section p {
+    margin: 0; /* Remove margens padrão */
+}
+
+.footer-section ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Espaçamento abaixo dos itens da lista */
+}
+
+.footer-section a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilo para direitos autorais */
+.footer-rights {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaçamento superior */
+    font-size: 0.9em; /* Tamanho da fonte */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Alinha as seções em coluna em telas pequenas */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer-section {
+        margin: 10px 0; /* Margem em cima e embaixo das seções */
+    }
+} 
 </style>
 <!doctype html>
 <html lang="en" dir="rtl" data-bs-theme="dark">
@@ -449,9 +733,15 @@
             </div>
         </div>
     </div>
+    <div class="floating-icon">
+        <a href="https://wa.me/556921414110" aria-label="Fale conosco">
+            <img src="assets\img\bg\whatsapp.png" alt="Ícone de WhatsApp">
+        </a>
+        <div class="tooltip">Fale Conosco</div>
+    </div>
 
     <!-- projects -->
-    <div id="projects" class="overflow-hidden py-7 py-sm-10 py-xl-9 bg-body-tertiary">
+    <div id="projects" class="overflow-hidden py-sm-10 py-xl-9 bg-body-tertiary" style="padding-bottom: 0rem !important;">
         <div class="container">
             <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
                 <div class="max-w-xl mx-auto">
@@ -469,7 +759,7 @@
                                 class="object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5 " alt="template"
                                 loading="lazy">
                         </div>
-                        <a href="assets/servicos/autopecas.html"
+                        <a href="assets\servicos\atacadista.html"
                             class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
                             Distribuidoras e Atacadistas
                         </a>
@@ -490,7 +780,7 @@
                         </a>
                     </div>
                 </div>
-              
+
                 <div class="col" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
                     <div class="position-relative pt-4 image_png">
                         <div class="ratio ratio-4x3">
@@ -665,165 +955,158 @@
                 </div>
             </div>
 
+            <!-- funcionalidades -->
+            <div id="funcionalidades" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary" style="padding-bottom: 0rem !important;">
+                <div class="container py-6 position-relative text-white rounded-3 rounded-sm-7 rounded-xl-12 shadow">
+                    <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
+                        <div class="max-w-xl mx-auto">
+                            <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl">
+                                Funcionalidades do Sistema NossoERP
+                            </h2>
+                        </div>
+                    </div>
 
-      <!-- funcionalidades -->
-      <div id="funcionalidades" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary">
-        <div class="container py-6 position-relative text-white rounded-3 rounded-sm-7 rounded-xl-12 shadow">
-            <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
-                <div class="max-w-xl mx-auto">
-                    <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl">
-                        Funcionalidades do Sistema NossoERP
-                    </h2>
-                </div>
-            </div>
+                    <!-- Conteúdo dos cartões diretamente visível -->
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Estoque</h3>
+                                <ul>
+                                    <li>Entrada de Nota Fiscal via Arquivo XML</li>
+                                    <li>Controle de Lote de Validade</li>
+                                    <li>Controle de Produtos Por Local De Estoque</li>
+                                    <li>Histórico de Movimentação de Mercadoria</li>
+                                    <li>Histórico de Produto (Compra/Venda)</li>
+                                    <li>Curva ABC de Estoque</li>
+                                    <li>Requisição de Estoque</li>
+                                    <li>Produtos em Falta</li>
+                                </ul>
+                            </div>
+                        </div>
 
-            <!-- Botões para ativar os colapsos -->
-            <div class="d-flex justify-content-center mb-4">
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEstoque" aria-expanded="false" aria-controls="collapseEstoque">
-                    Estoque
-                </button>
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseVendas" aria-expanded="false" aria-controls="collapseVendas">
-                    Vendas
-                </button>
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFiscal" aria-expanded="false" aria-controls="collapseFiscal">
-                    Fiscal
-                </button>
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFinanceiro" aria-expanded="false"
-                    aria-controls="collapseFinanceiro">
-                    Financeiro
-                </button>
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseOrdemServico" aria-expanded="false"
-                    aria-controls="collapseOrdemServico">
-                    Ordem de Serviço
-                </button>
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseLogistica" aria-expanded="false" aria-controls="collapseLogistica">
-                    Logística
-                </button>
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseCompras" aria-expanded="false" aria-controls="collapseCompras">
-                    Compras
-                </button>
-                <button class="btn btn-primary mx-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseOutros" aria-expanded="false" aria-controls="collapseOutros">
-                    Outras Funcionalidades
-                </button>
-            </div>
-                    <!-- Colapsos -->
-                    <div class="collapse" id="collapseEstoque">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Entrada de Nota Fiscal via Arquivo XML</li>
-                                <li>Controle de Lote de Validade</li>
-                                <li>Controle de Produtos Por Local De Estoque</li>
-                                <li>Histórico de Movimentação de Mercadoria</li>
-                                <li>Histórico de Produto (Compra/Venda)</li>
-                                <li>Curva ABC de Estoque</li>
-                                <li>Requisição de Estoque</li>
-                                <li>Produtos em Falta</li>
-                            </ul>
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Vendas</h3>
+                                <ul>
+                                    <li>Pré-Vendas / Orçamentos / Vendas PDV</li>
+                                    <li>Histórico de Vendas</li>
+                                    <li>Histórico de Clientes (Vendas/Financeiro)</li>
+                                    <li>Controle de Encomendas</li>
+                                    <li>Controle de Entrega Futura</li>
+                                    <li>Controle de Metas</li>
+                                    <li>Curva ABC de Vendas (Produtos / Clientes)</li>
+                                    <li>Gestão de Comissões</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="collapse" id="collapseVendas">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Pré-Vendas / Orçamentos / Vendas PDV</li>
-                                <li>Histórico de Vendas</li>
-                                <li>Histórico de Clientes (Vendas/Financeiro)</li>
-                                <li>Controle de Encomendas</li>
-                                <li>Controle de Entrega Futura</li>
-                                <li>Controle de Metas</li>
-                                <li>Curva ABC de Vendas (Produtos / Clientes)</li>
-                                <li>Gestão de Comissões</li>
-                            </ul>
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Gestão de Preços</h3>
+                                <ul>
+                                    <li>Preço de Varejo</li>
+                                    <li>Preço de Atacado</li>
+                                    <li>Preço Super-Atacado</li>
+                                    <li>Preço de Promoção</li>
+                                    <li>Tabela de Preço Por Cliente</li>
+                                    <li>Tabela de Preço Por Região</li>
+                                    <li>Importação de Preço Loja Filial</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="collapse" id="collapseFiscal">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Nf-e / Nfc-e</li>
-                                <li>Mdf-e</li>
-                                <li>Ct-e</li>
-                                <li>Sped Fiscal</li>
-                                <li>Sped Contribuições</li>
-                                <li>Balanço (Bloco H)</li>
-                                <li>Consulta de Dfe de Terceiros</li>
-                                <li>Nfe Contas (Bloco C500 e D500)</li>
-                            </ul>
+
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Fiscal</h3>
+                                <ul>
+                                    <li>Nf-e / Nfc-e</li>
+                                    <li>Mdf-e</li>
+                                    <li>Ct-e</li>
+                                    <li>Sped Fiscal</li>
+                                    <li>Sped Contribuições</li>
+                                    <li>Balanço (Bloco H)</li>
+                                    <li>Consulta de Dfe de Terceiros</li>
+                                    <li>Nfe Contas (Bloco C500 e D500)</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="collapse" id="collapseFinanceiro">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Controle de Caixa / Banco</li>
-                                <li>Contas a Pagar / Receber</li>
-                                <li>Cheques Emitidos / Recebidos</li>
-                                <li>Emissão de Boletos</li>
-                                <li>Integração Pix</li>
-                                <li>Controle de Cartões</li>
-                                <li>Demonstrativo de Despesas / Receitas</li>
-                                <li>Fluxo de Caixa</li>
-                            </ul>
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Ordem de Serviço</h3>
+                                <ul>
+                                    <li>Controle de Ordem Serviço</li>
+                                    <li>Histórico O.Serviço (Placa / N.Série / Cliente)</li>
+                                    <li>Controle de Requisição de Peças Por O.Serviço</li>
+                                    <li>Desconto Por Peça/Serviço (Geral / Individual)</li>
+                                    <li>Comissão Por Vendedor/Atendente/Mecânico</li>
+                                    <li>Comissão Por Peça / Serviço</li>
+                                    <li>Rateio de Comissão Entre Mecânicos</li>
+                                    <li>Controle de Retirada Veículo / Equipamento</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="collapse" id="collapseOrdemServico">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Controle de Ordem Serviço</li>
-                                <li>Histórico O.Serviço (Placa / N.Série / Cliente)</li>
-                                <li>Controle de Requisição de Peças Por O.Serviço</li>
-                                <li>Desconto Por Peça/Serviço (Geral / Individual)</li>
-                                <li>Comissão Por Vendedor/Atendente/Mecânico</li>
-                                <li>Comissão Por Peça / Serviço</li>
-                                <li>Rateio de Comissão Entre Mecânicos</li>
-                                <li>Controle de Retirada Veículo / Equipamento</li>
-                            </ul>
+
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Financeiro</h3>
+                                <ul>
+                                    <li>Controle de Caixa / Banco</li>
+                                    <li>Contas a Pagar / Receber</li>
+                                    <li>Cheques Emitidos / Recebidos</li>
+                                    <li>Emissão de Boletos</li>
+                                    <li>Integração Pix</li>
+                                    <li>Controle de Cartões</li>
+                                    <li>Demonstrativo de Despesas / Receitas</li>
+                                    <li>Fluxo de Caixa</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="collapse" id="collapseLogistica">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Controle de Entrega</li>
-                                <li>Romaneio de Carga</li>
-                                <li>Locais de Estoque</li>
-                                <li>Endereçamento Logistico</li>
-                                <li>Etiquetas</li>
-                                <li>Controle de Comodatos</li>
-                            </ul>
+
+
+
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Logística</h3>
+                                <ul>
+                                    <li>Controle de Entrega</li>
+                                    <li>Romaneio de Carga</li>
+                                    <li>Locais de Estoque</li>
+                                    <li>Endereçamento Logistico</li>
+                                    <li>Etiquetas</li>
+                                    <li>Controle de Comodatos</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="collapse" id="collapseCompras">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Sugestão de Compra</li>
-                                <li>Pedido de Compra</li>
-                                <li>Cotação</li>
-                            </ul>
+
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Compras</h3>
+                                <ul>
+                                    <li>Sugestão de Compra</li>
+                                    <li>Pedido de Compra</li>
+                                    <li>Cotação</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="collapse" id="collapseOutros">
-                        <div class="card card-body">
-                            <ul>
-                                <li>Ordem de Produção</li>
-                                <li>Açougue - Controle de Desossa</li>
-                                <li>Cadastro de Múltiplas Embalagens de Vendas</li>
-                                <li>Controle de Cesta Básica</li>
-                                <li>Sistema Multi Lojas</li>
-                            </ul>
+
+                        <div class="col-md-4 mb-3">
+                            <div class="card card-body">
+                                <h3>Outras Funcionalidades</h3>
+                                <ul>
+                                    <li>Ordem de Produção</li>
+                                    <li>Açougue - Controle de Desossa</li>
+                                    <li>Cadastro de Múltiplas Embalagens de Vendas</li>
+                                    <li>Controle de Cesta Básica</li>
+                                    <li>Sistema Multi Lojas</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Call to action -->
-            <div class="pb-9 pt-7">
+            <div class="pb-9 pt-7" id="integracao">
                 <div class="container">
-                    <div class="py-6 position-relative text-white rounded-3 rounded-sm-4 rounded-xl-5 shadow">
+                    <div class="py-6 position-relative rounded-3 rounded-sm-4 rounded-xl-5 call-to-action-background">
                         <img src="/"
                             class="position-absolute z-n1 top-0 h-100 w-100 object-fit-cover rounded-3 rounded-sm-4 rounded-xl-5"
                             loading="lazy" alt="Meeting">
@@ -835,121 +1118,95 @@
                         <div class="row">
                             <!-- Coluna Esquerda -->
                             <div class="col-md-6">
-
                                 <!-- Espaço para as imagens dos parceiros -->
-                                <div class="mt-6 text-with-image">
+                                <div class="text-with-image">
                                     <div class="text">
-                                        <!-- Adicione suas imagens aqui -->
-                                        Agilize as transações financeiras com cartões de credito e ofereça mais
-                                        opções de pagamento aos seus clientes.
-                                        <img src="/assets/img/bg/tef.png" alt="Parceiro 1" class="img_integracao">
+                                        <strong>TEF:</strong> Agilize as transações financeiras com cartões de crédito e
+                                        ofereça mais opções de pagamento aos seus clientes.
                                     </div>
+                                    <img src="/assets/img/bg/tef.png" alt="Parceiro 1" class="img_integracao">
                                 </div>
 
-                                <div class="mt-6 text-with-image">
-
-                                    Mantenha-se competitivo atualizando rapidamente os preços na gôndola.
-                                    <img src="/assets\img\bg\Busca-Preco_1.png " alt="Parceiro 2"
-                                        class="img_integracao">
-                                    <!-- Continue adicionando imagens conforme necessário -->
+                                <div class="text-with-image">
+                                    <div class="text">
+                                        <strong>Buscando Preço:</strong> Mantenha-se competitivo atualizando rapidamente
+                                        os preços na gôndola.
+                                    </div>
+                                    <img src="/assets/img/bg/Busca-Preco_1.png" alt="Parceiro 2" class="img_integracao">
+                                </div>
+                                <div class="text-with-image">
+                                    <div class="text">
+                                        <strong>Balanças:</strong> Aumente a Eficiência nas Vendas e Economize Tempo
+                                        através da integração de balanças com o PDV do sistema NossoERP.
+                                    </div>
+                                    <img src="assets\img\bg\balanca.avif" alt="Parceiro 2" class="img_integracao">
+                                </div>
+                                <div class="text-with-image">
+                                    <div class="text">
+                                        <strong>Etiquetadora:</strong> Gere etiquetas personalizadas com o sistema
+                                        NossoERP.
+                                    </div>
+                                    <img src="assets\img\bg\etiquetadora.avif" alt="Parceiro 2" class="img_integracao">
                                 </div>
                             </div>
 
                             <!-- Coluna Direita -->
                             <div class="col-md-6">
-                                <div class="mx-auto max-w-2xl mt-6">
+                                <div class="mx-auto max-w-2xl">
                                     <h2 class="m-0 tracking-tight text-4xl fw-bold text-center">
                                         Integrações NossoERP
                                     </h2>
                                     <p class="m-0 mt-4 text-lg leading-8 text-center">
-                                        O sistema de gestão NossoERP conta com várias integrações que
-                                        agregam
+                                        O sistema de gestão NossoERP conta com várias integrações que agregam
                                         eficiência, segurança e produtividade na operação da sua empresa.
                                     </p>
                                 </div>
 
                                 <!-- Espaço para outras imagens e textos -->
                                 <div class="mt-6 text-center">
-                                    <!-- Adicione suas imagens e textos aqui -->
-                                    <img src="assets\img\bg\parceiros1.png" alt="Parceiro 3" class="img-max-width-210">
-                                    <img src="assets\img\bg\parceiro2.png" alt="Parceiro 3" class="img-max-width-210">
-                                    <img src="assets\img\bg\parceiro3.png" alt="Parceiro 3" class="img-max-width-210">
-                                    <img src="assets\img\bg\parceiro4.png" alt="Parceiro 3" class="img-max-width-210">
-                                    <img src="assets\img\bg\parceiro6.png" alt="Parceiro 3" class="img-max-width-210">
-                                    <img src="assets\img\bg\parceiro5.png" alt="Parceiro 3" class="img-max-width-210">
-
-                                    <!-- Continue adicionando conforme necessário -->
+                                    <img src="assets/img/bg/parceiros1.png" alt="Parceiro 3" class="img-max-width-210">
+                                    <img src="assets/img/bg/parceiro2.png" alt="Parceiro 3" class="img-max-width-210">
+                                    <img src="assets/img/bg/parceiro3.png" alt="Parceiro 3" class="img-max-width-210">
+                                    <img src="assets/img/bg/parceiro4.png" alt="Parceiro 3" class="img-max-width-210">
+                                    <img src="assets/img/bg/parceiro6.png" alt="Parceiro 3" class="img-max-width-210">
+                                    <img src="assets/img/bg/parceiro5.png" alt="Parceiro 3" class="img-max-width-210">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            <hr class="my-2 text-body-emphasis opacity-10">
-        </div>
-
-        <footer class="container py-4">
-            <div class="d-flex flex-column flex-md-row gap-4 justify-content-md-between align-items-md-center">
-                <p class="text-body-tertiary text-xs leading-5 mb-0">
-                    ©
-                    <span class="current-year"></span>
-                    Your Company, Inc. All rights reserved.
-                </p>
-
-                <div class="order-first order-md-last">
-                    <!-- intagram icon -->
-                    <a href="javascript:;" class="btn bg-body-secondary text-body social my-2 p-2 me-3 rounded-circle">
-                        <span class="d-flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                            </svg>
-                        </span>
-                    </a>
-
-                    <!-- linkedIn icon -->
-                    <a href="javascript:;" class="btn bg-body-secondary text-body social my-2 p-2 me-3 rounded-circle">
-                        <span class="d-flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                viewBox="0 0 448 512">
-                                <path
-                                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-                            </svg>
-                        </span>
-                    </a>
-
-                    <!-- github icon -->
-                    <a href="javascript:;" class="btn bg-body-secondary text-body social my-2 p-2 me-3 rounded-circle">
-                        <span class="d-flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                viewBox="0 0 496 512">
-                                <path
-                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                            </svg>
-                        </span>
-                    </a>
-
-                    <!-- youtube icon -->
-                    <a href="javascript:;" class="btn bg-body-secondary text-body social my-2 p-2 rounded-circle">
-                        <span class="d-flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-                            </svg>
-                        </span>
-                    </a>
-                </div>
+            <div class="content">
+                <!-- Seu conteúdo principal aqui -->
             </div>
-
-        </footer>
-
-
-
+            
+            <footer class="footer" id="contato">
+                <div class="footer-content">
+                    <!-- Endereço -->
+                 
+            
+                    <!-- Contatos -->
+                    <div class="footer-section contacts">
+                        <h4>Contatos</h4>
+                        <p>Fone/Whats: (69) 2141-4110</p>
+                        <p>Email: contato@nossoerp.com.br</p>
+                    </div>
+            
+                    <!-- Institucional -->
+                    <div class="footer-section institutional">
+                        <h4>Institucional</h4>
+                        <ul>
+                            <li><a href="politica-de-privacidade.html">Políticas de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section address">
+                        <h4>Endereço</h4>
+                        <p>Rua: Guanabara, 1747 -  B: São Cristovão Esquina C/ D.Pedro II</p>
+                       <p> Porto Velho – RO CEP: 76804-031</p>
+                    </div>
+                </div>
+                <p class="footer-rights">© 2021 - OBTER SOLUCOES TECNOLOGICAS LTDA 26.182.885/0001-80</p>
+            </footer>
 </body>
 
 <!-- Bootstrap JavaScript: Bundle with Popper -->
@@ -992,7 +1249,6 @@
             });
         });
     });
-    
 </script>
 
 
