@@ -2,6 +2,26 @@
     .img_max {
         max-width: 205px;
     }
+
+    /* Define a cor do texto dos links como preta */
+    .nav-link {
+        color: black !important;
+        /* Garante que o texto seja preto */
+        background-color: black;
+        /* Cor de fundo dos links */
+        text-decoration: none;
+        /* Remove sublinhado dos links */
+    }
+
+    /* Define a cor do texto ao passar o mouse sobre o link */
+    .nav-link:hover {
+        color: white;
+        /* Cor do texto ao passar o mouse */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        /* Efeito de profundidade */
+        background-color: #333;
+        /* Altere para a cor de fundo desejada ao passar o mouse */
+    }
 </style>
 <!-- Stylesheets -->
 <link rel="stylesheet" href="./assets/libraries/glide/css/glide.core.min.css">
@@ -40,8 +60,7 @@
                             <!-- <strong class="text-body-emphasis fw-bolder fst-italic"> John Daylo </strong> -->
                         </a>
                     </h5>
-                    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
                 <div class="offcanvas-body">
@@ -49,27 +68,26 @@
                         class="navbar-nav align-items-xl-center justify-content-center flex-grow-1 column-gap-4 row-gap-4">
                         <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
                             <a href="javascript:;" onclick="scrollToSection('#home')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 bg-body-secondary-hover">
                                 Home
                             </a>
                         </li>
 
                         <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a href="javascript:;" onclick="scrollToSection('#integracao')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 bg-body-secondary-hover">
                                 Integrações NossoERP
                             </a>
                         </li>
                         <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a href="javascript:;" onclick="scrollToSection('#funcionalidades')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 bg-body-secondary-hover">
                                 Funcionalidades
                             </a>
                         </li>
-
                         <li class="nav-item" data-bs-dismiss="offcanvas">
                             <a href="javascript:;" onclick="scrollToSection('#projects')"
-                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 bg-body-secondary-hover">
                                 Ramos de Atendimento
                             </a>
                         </li>

@@ -61,7 +61,7 @@
 
     /* Estilos personalizados */
     .header-bg {
-        background-color: #EB7318;
+        background-color: #fff;
         /* Corrigido para código de cor hexadecimal */
     }
 
@@ -482,6 +482,8 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        color: #000;
+        background-color: #fff;
     }
 
     /* Contêiner do texto e imagem */
@@ -579,79 +581,110 @@
             /* Centraliza as imagens no container */
         }
     }
-/* Garante que o footer ocupe toda a largura da tela */
-.footer {
-    background-color: #333; /* Cor de fundo do footer */
-    color: #fff; /* Cor do texto */
-    padding: 20px 0; /* Espaçamento interno */
-    position: relative;
-    width: 100%; /* Largura total do footer */
-    text-align: left; /* Alinhamento do texto */
-    bottom: 0; /* Fixa o footer na parte inferior */
-    left: 0; /* Alinha o footer à esquerda */
-}
 
-/* Contêiner do conteúdo do footer */
-.footer-content {
-    display: flex; /* Flexbox para alinhar as seções */
-    justify-content: space-between; /* Espaçamento entre as seções */
-    flex-wrap: wrap; /* Permite que as seções se movam para a linha seguinte em telas pequenas */
-    max-width: 1200px; /* Largura máxima */
-    margin: 0 auto; /* Centraliza o contêiner */
-    padding: 0 15px; /* Espaçamento interno lateral */
-}
+    /* Garante que o footer ocupe toda a largura da tela */
+    .footer {
+        background-color: #333;
+        /* Cor de fundo do footer */
+        color: #fff;
+        /* Cor do texto */
+        padding: 20px 0;
+        /* Espaçamento interno */
+        position: relative;
+        width: 100%;
+        /* Largura total do footer */
+        text-align: left;
+        /* Alinhamento do texto */
+        bottom: 0;
+        /* Fixa o footer na parte inferior */
+        left: 0;
+        /* Alinha o footer à esquerda */
+    }
 
-/* Seções do footer */
-.footer-section {
-    flex: 1; /* Flexível para ajustar o tamanho das seções */
-    margin: 0 15px; /* Margem ao redor das seções */
-    min-width: 150px; /* Largura mínima para evitar que as seções fiquem muito pequenas */
-}
-
-.footer-section h4 {
-    margin-bottom: 10px; /* Espaçamento abaixo dos títulos */
-}
-
-.footer-section p {
-    margin: 0; /* Remove margens padrão */
-}
-
-.footer-section ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove o padding da lista */
-}
-
-.footer-section ul li {
-    margin-bottom: 10px; /* Espaçamento abaixo dos itens da lista */
-}
-
-.footer-section a {
-    color: #fff; /* Cor dos links */
-    text-decoration: none; /* Remove o sublinhado dos links */
-}
-
-.footer-section a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estilo para direitos autorais */
-.footer-rights {
-    text-align: center; /* Centraliza o texto */
-    margin-top: 20px; /* Espaçamento superior */
-    font-size: 0.9em; /* Tamanho da fonte */
-}
-
-/* Media Queries para responsividade */
-@media (max-width: 768px) {
+    /* Contêiner do conteúdo do footer */
     .footer-content {
-        flex-direction: column; /* Alinha as seções em coluna em telas pequenas */
-        text-align: center; /* Centraliza o texto */
+        display: flex;
+        /* Flexbox para alinhar as seções */
+        justify-content: space-between;
+        /* Espaçamento entre as seções */
+        flex-wrap: wrap;
+        /* Permite que as seções se movam para a linha seguinte em telas pequenas */
+        max-width: 1200px;
+        /* Largura máxima */
+        margin: 0 auto;
+        /* Centraliza o contêiner */
+        padding: 0 15px;
+        /* Espaçamento interno lateral */
     }
 
+    /* Seções do footer */
     .footer-section {
-        margin: 10px 0; /* Margem em cima e embaixo das seções */
+        flex: 1;
+        /* Flexível para ajustar o tamanho das seções */
+        margin: 0 15px;
+        /* Margem ao redor das seções */
+        min-width: 150px;
+        /* Largura mínima para evitar que as seções fiquem muito pequenas */
     }
-} 
+
+    .footer-section h4 {
+        margin-bottom: 10px;
+        /* Espaçamento abaixo dos títulos */
+    }
+
+    .footer-section p {
+        margin: 0;
+        /* Remove margens padrão */
+    }
+
+    .footer-section ul {
+        list-style-type: none;
+        /* Remove marcadores da lista */
+        padding: 0;
+        /* Remove o padding da lista */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+        /* Espaçamento abaixo dos itens da lista */
+    }
+
+    .footer-section a {
+        color: #fff;
+        /* Cor dos links */
+        text-decoration: none;
+        /* Remove o sublinhado dos links */
+    }
+
+    .footer-section a:hover {
+        text-decoration: underline;
+        /* Adiciona sublinhado ao passar o mouse */
+    }
+
+    /* Estilo para direitos autorais */
+    .footer-rights {
+        text-align: center;
+        /* Centraliza o texto */
+        margin-top: 20px;
+        /* Espaçamento superior */
+        font-size: 0.9em;
+        /* Tamanho da fonte */
+    }
+
+    /* Media Queries para responsividade */
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            /* Alinha as seções em coluna em telas pequenas */
+            text-align: center;
+            /* Centraliza o texto */
+        }
+
+        .footer-section {
+            margin: 10px 0;
+            /* Margem em cima e embaixo das seções */
+        }
+    }
 </style>
 <!doctype html>
 <html lang="en" dir="rtl" data-bs-theme="dark">
@@ -693,7 +726,7 @@
     <div id="header"></div>
 
     <!-- Hero -->
-    <div id="home" class="d-flex align-items-center position-relative">
+    <div id="home" class="d-flex align-items-center position-relative" style="background-color: #EA580C;">
         <div class="container">
             <div class="py-8 py-md-9 py-xl-11">
                 <div class="row gy-5 align-items-center justify-content-between">
@@ -704,8 +737,8 @@
                                 data-aos="fade" data-aos-duration="1000">
                                 Aumente a Produtividade Da Sua Empresa Com o <span class="orange-text">NossoERP</span>
                             </h1>
-                            <p class="m-0 mt-4 text-lg leading-8 text-body-secondary" data-aos-delay="100"
-                                data-aos="fade" data-aos-duration="1000">
+                            <p class="m-0 mt-4 text-lg leading-8 " data-aos-delay="100" data-aos="fade"
+                                data-aos-duration="1000">
                                 O NossoErp é um Sistema de gestão eficiente, com tudo que sua empresa precisa para
                                 gerenciar as operações do dia a dia, de forma fácil e integrado, com menos trabalho
                                 e muito mais resultado
@@ -740,11 +773,13 @@
     </div>
 
     <!-- projects -->
-    <div id="projects" class="overflow-hidden py-sm-10 py-xl-9 bg-body-tertiary" style="padding-bottom: 0rem !important;">
+    <div id="projects" class="overflow-hidden py-sm-10 py-xl-9 bg-body-tertiary"
+        style="padding-bottom: 0rem !important; background-color: white !important;">
         <div class="container">
             <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
                 <div class="max-w-xl mx-auto">
-                    <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl">
+                    <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl"
+                        style="color: #4A90E2 !important;">
                         Alguns dos Ramos que Atendemos
                     </h2>
                 </div>
@@ -759,7 +794,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\atacadista.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Distribuidoras e Atacadistas
                         </a>
                     </div>
@@ -774,7 +810,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\motossera.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Lojas de Motosserra
                         </a>
                     </div>
@@ -788,7 +825,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autocenter.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Material de Construção
                         </a>
                     </div>
@@ -801,7 +839,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/supermercado.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Supermercado
                         </a>
                     </div>
@@ -814,7 +853,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\marmoraria.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Marmoraria
                         </a>
                     </div>
@@ -828,7 +868,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autopecas.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             AutoPeças e MotoPeças
                         </a>
                     </div>
@@ -842,7 +883,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autopecas.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Auto Center
                         </a>
                     </div>
@@ -856,7 +898,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\agropecuaria.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Agropecuária
                         </a>
                     </div>
@@ -869,7 +912,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autocenter.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Ferragens e Ferramentas
                         </a>
                     </div>
@@ -882,7 +926,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/autocenter.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Materiais Elétricos
                         </a>
                     </div>
@@ -895,7 +940,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\papelarias.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Papelarias
                         </a>
                     </div>
@@ -908,7 +954,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets/servicos/limpeza.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Materiais de Limpeza
                         </a>
                     </div>
@@ -921,7 +968,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\presentes.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Artigos e Presentes
                         </a>
                     </div>
@@ -934,7 +982,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\calcados.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Confecções e Calçados
                         </a>
                     </div>
@@ -947,7 +996,8 @@
                                 loading="lazy">
                         </div>
                         <a href="assets\servicos\odontologicos.html"
-                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link">
+                            class="mt-4 d-block text-xl fw-medium tracking-tight text-decoration-none text-body-tertiary text-body-emphasis-hover stretched-link"
+                            style="color: #4A90E2 !important;">
                             Materiais Odontologicos e Hospitalar
                         </a>
                     </div>
@@ -955,11 +1005,14 @@
             </div>
 
             <!-- funcionalidades -->
-            <div id="funcionalidades" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary" style="padding-bottom: 0rem !important; padding-top: 3rem !important;">
-                <div class="container py-6 position-relative text-white rounded-3 rounded-sm-7 rounded-xl-12 shadow">
+            <div id="funcionalidades" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary"
+                style="padding-bottom: 0rem !important; padding-top: 3rem !important; ">
+                <div class="container py-6 position-relative text-white rounded-3 rounded-sm-7 rounded-xl-12 shadow"
+                    style="background: #E8E8E8; !important">
                     <div class="mb-5 mb-sm-6 mb-xl-7 text-center">
                         <div class="max-w-xl mx-auto">
-                            <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl">
+                            <h2 class="m-0 mt-2 fw-bold tracking-tight text-body-emphasis text-4xl"
+                                style="color: #EA580C !important">
                                 Funcionalidades do Sistema NossoERP
                             </h2>
                         </div>
@@ -971,7 +1024,7 @@
                             <div class="card card-body">
                                 <h3>Estoque</h3>
                                 <ul>
-                                    <li>Entrada de Nota  Fiscal via Arquivo XML </li>
+                                    <li>Entrada de Nota Fiscal via Arquivo XML </li>
                                     <li>Controle de Lote de Validade</li>
                                     <li>Controle de Produtos Por Local De Estoque</li>
                                     <li>Histórico de Movimentação de Mercadoria</li>
@@ -1176,19 +1229,19 @@
                 </div>
             </div>
 
-            
+
             <footer class="footer" id="contato">
                 <div class="footer-content">
                     <!-- Endereço -->
-                 
-            
+
+
                     <!-- Contatos -->
                     <div class="footer-section contacts">
                         <h4>Contatos</h4>
                         <p>Fone/Whats: (69) 2141-4110</p>
                         <p>Email: contato@nossoerp.com.br</p>
                     </div>
-            
+
                     <!-- Institucional -->
                     <div class="footer-section institutional">
                         <h4>Institucional</h4>
@@ -1198,8 +1251,8 @@
                     </div>
                     <div class="footer-section address">
                         <h4>Endereço</h4>
-                        <p>Rua: Guanabara, 1747 -  B: São Cristovão Esquina C/ D.Pedro II</p>
-                       <p> Porto Velho – RO CEP: 76804-031</p>
+                        <p>Rua: Guanabara, 1747 - B: São Cristovão Esquina C/ D.Pedro II</p>
+                        <p> Porto Velho – RO CEP: 76804-031</p>
                     </div>
                 </div>
                 <p class="footer-rights">© 2021 - OBTER SOLUCOES TECNOLOGICAS LTDA 26.182.885/0001-80</p>
